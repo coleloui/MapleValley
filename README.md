@@ -1,1 +1,16 @@
 # MapleValley
+things to update readme towards the end:
+TABLE OF CONTENTS
+
+PROJECT TITLE 
+
+INTRODUCTION (PROJECT AIM)
+
+TECH/FRAMEWORKS USED
+
+HOW CAN WE LAUNCH PROJECT?
+
+OTHER INFO
+
+
+
