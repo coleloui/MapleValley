@@ -19,7 +19,7 @@ module.exports = function (sequelize, DataTypes) {
         emergency_contact_2_name: DataTypes.STRING, 
         emergency_contact_2_phone: DataTypes.STRING, 
         emergency_contact_2_relationship: DataTypes.STRING, 
-        contact_for_volunteer: DataTypes.BOOLEAN,
+        contact_for_volunteer: DataTypes.BOOLEAN
 
     
 

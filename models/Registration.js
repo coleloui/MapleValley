@@ -13,13 +13,19 @@ module.exports = function (sequelize, DataTypes) {
         registration_confirmed: DataTypes.BOOLEAN,
         troop_number: DataTypes.INTEGER, 
         service_unit_number: DataTypes.INTEGER,
-        authorized_release_names: DataTypes.TEXT 
-
+        authorized_release_names: DataTypes.TEXT
     });
 
     Registration.associate = function(models){
-        Registration.hasMany(models.FamilyInfo);
-    }
+        Registration.hasMany(models.FamilyInfo, {onDelete: "cascade"});
+        Registration.hasMany(models.MedicationPermit, {onDelete: "cascade"});
+        Registration.hasMany(models.HealthHistory, {onDelete: "cascade"});
+        Registration.hasMany(models.VolunteerInfo, {onDelete: "cascade"});
+        Registration.belongsTo(models.Event)
+        // Registration.hasMany(models.Event, {onDelete: "cascade"});
+    };
+
+    
 
     return Registration;
 }
