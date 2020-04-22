@@ -1,5 +1,0 @@
-edge-cases after we are at mvp
-
-if(volunteer == participants em contact 1) {
-    insert volunteer em contact or participants em contact 2
-}
