@@ -37,7 +37,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 const registrationApiRoutes = require("./controllers/registrationController");
-const familyInfoApiRoutes = require("./controllers/familyInfoController");
+// const familyInfoApiRoutes = require("./controllers/familyInfoController");
 const healthHistoryApiRoutes = require("./controllers/healthHistoryController");
 const medicationPermitApiRoutes = require("./controllers/medicationPermitController");
 const volunteerInfoApiRoutes = require("./controllers/volunteerInfoController");
@@ -47,7 +47,7 @@ const htmlRoutes = require("./controllers/htmlController");
 
 
 app.use("/api.registration", registrationApiRoutes);
-app.use("/api.family.info", familyInfoApiRoutes);
+// app.use("/api.family.info", familyInfoApiRoutes);
 app.use("/api.health.history", healthHistoryApiRoutes);
 app.use("/api.medication.permit", medicationPermitApiRoutes);
 app.use("/api.volunteer.info", volunteerInfoApiRoutes);
@@ -64,6 +64,6 @@ db.sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
-}).catch(err => {
+}).catch(err => { 
   throw err;
 });
