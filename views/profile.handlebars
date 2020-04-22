@@ -1,4 +1,16 @@
 <h1 class="title">this is just a placeholder for now</h1>
 
+{{#each data}}
+<div>
+   <p>ID:  {{dataValues.id}}</p>
+   <p>First Name:  {{dataValues.first_name}}</p>
+   <p>Last name:  {{dataValues.last_name}}</p>
+   <p>Birthdate:  {{dataValues.birthdate}}</p>
+   <p>buddy request:  {{dataValues.buddy_request}}</p>
+    
+</div>
+{{/each}}
+
+
 
 <a href="/role" class="button" type="submit">Register for Camp!</a>

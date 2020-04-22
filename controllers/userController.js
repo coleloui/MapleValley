@@ -6,7 +6,27 @@ const bcrypt = require("bcrypt");
 
 router.get("/profile", function (req, res) {
     if (req.session.user) {
-        res.render("profile", req.session.user)
+        const data = {
+            id: req.session.user.id,
+            username: req.session.user.username
+        }
+
+        db.Registration.findAll({
+            where:{
+                first_year:req.session.user.id
+            }
+             //where the id is the session id
+            // include the registration table
+        }).then((results) => {
+            
+
+            const register = {data: results};
+            console.log(register);
+            // depending on what  it looks like, either just send it back or put it in an object for handlebars
+            // replace data with the results or the handlebars object
+            res.render("profile", register
+            );
+        })
     } else {
         res.redirect("/login");
     }
@@ -35,7 +55,7 @@ router.post("/signup", function (req, res) {
 })
 
 router.get("/login", function (req, res) {
-    res.render("login");
+    res.render("index");
 })
 
 router.post("/login", function (req, res) {
@@ -54,6 +74,9 @@ router.post("/login", function (req, res) {
         } else {
             res.send("not logged in")
         }
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
     })
 })
 
