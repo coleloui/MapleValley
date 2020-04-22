@@ -1,105 +1,142 @@
-<form>
 
+    {{#if volunteer}}
 
-{{#if volunteer}}
+    <h1>I AM VOLUNTEER</h1>
 
-<div class="field">
-    <label class="label">Email</label>
-    <div class="control">
-        <input class="input" type="email" placeholder="test@test.com">
+    <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+            <input class="input" type="email" placeholder="test@test.com">
+        </div>
     </div>
-</div>
 
-<div class="field">
-    <div class="field-label">
+    <div class="field">
         <label class="label">Are you registered as a Girl Scout?</label>
-    </div>
-    <div class="field-body">
-        <div class="field is-narrow">
-            <div class="control">
-                <label class="radio">
-                    <input type="radio" name="member">
-                    Yes
-                </label>
-                <label class="radio">
-                    <input type="radio" name="member">
-                    No
-                </label>
+        <div class="field-body">
+            <div class="field is-narrow">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="member">
+                        Yes
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="member">
+                        No
+                    </label>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-{{/if}}
+    {{/if}}
 
-{{#if childVolunteer}}
+    {{#if childVolunteer}}
 
-<div class="field">
-    <label class="label">Email</label>
-    <div class="control">
-        <input class="input" type="email" placeholder="test@test.com">
+        <h1>I AM CHILD VOLUNTEER</h1>
+
+
+    <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+            <input class="input" type="email" placeholder="test@test.com">
+        </div>
     </div>
-</div>
 
-<div class="field">
-    <div class="field-label">
+    <div class="field">
         <label class="label">Are you registered as a Girl Scout?</label>
-    </div>
-    <div class="field-body">
-        <div class="field is-narrow">
-            <div class="control">
-                <label class="radio">
-                    <input type="radio" name="member">
-                    Yes
-                </label>
-                <label class="radio">
-                    <input type="radio" name="member">
-                    No
-                </label>
+        <div class="field-body">
+            <div class="field is-narrow">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="member">
+                        Yes
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="member">
+                        No
+                    </label>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-{{/if}}
+    {{/if}}
 
-{{#if participant}}
+    {{#if participant}}
 
-<div class="field">
-    <label class="label">Guardian Email</label>
-    <div class="control">
-        <input class="input" type="email" placeholder="test@test.com">
+        <h1>I AM Participant</h1>
+
+
+    <div class="field">
+        <label class="label">Guardian Email</label>
+        <div class="control">
+            <input class="input" type="email" placeholder="test@test.com">
+        </div>
     </div>
-</div>
 
-<div class="field">
-    <label class="label">Participant Email</label>
-    <div class="control">
-        <input class="input" type="email" placeholder="test@test.com">
+    <div class="field">
+        <label class="label">Participant Email</label>
+        <div class="control">
+            <input class="input" type="email" placeholder="test@test.com">
+        </div>
     </div>
-</div>
 
-<div class="field">
-    <div class="field-label">
+    <div class="field">
         <label class="label">Are you registered as a Girl Scout?</label>
-    </div>
-    <div class="field-body">
-        <div class="field is-narrow">
-            <div class="control">
-                <label class="radio">
-                    <input type="radio" name="member">
-                    Yes
-                </label>
-                <label class="radio">
-                    <input type="radio" name="member">
-                    No
-                </label>
+        <div class="field-body">
+            <div class="field is-narrow">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="member">
+                        Yes
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="member">
+                        No
+                    </label>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-{{/if}}
+    {{/if}}
+
+{{#if boy}}
+
+    <h1>I AM BOY HEAR ME ROAR!</h1>
 
 
-</form>
+    <div class="field">
+        <label class="label">Guardian Email</label>
+        <div class="control">
+            <input class="input" type="email" placeholder="test@test.com">
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Participant Email</label>
+        <div class="control">
+            <input class="input" type="email" placeholder="test@test.com">
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Are you registered as a Girl Scout?</label>
+        <div class="field-body">
+            <div class="field is-narrow">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="member">
+                        Yes
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="member">
+                        No
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{/if}}
+
