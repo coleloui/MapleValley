@@ -5,13 +5,13 @@ const db = require("../models");
 
 
 
-router.get('/registration', (req,res)=>{
+router.get('/register', (req,res)=>{
     db.Registration.findAll().then( dbRegistration=> {
         res.json(dbRegistration);
     })
 });
 
-router.post('/registration', (req,res)=>{
+router.post('/register', (req,res)=>{
     db.Registration.create({
         first_year: req.body.first_year,
         first_name: req.body.first_name,
