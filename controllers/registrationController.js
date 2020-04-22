@@ -11,7 +11,10 @@ router.get('/registration', (req,res)=>{
     })
 });
 
-router.post('/registration', (req,res)=>{
+router.post('/register', (req,res)=>{
+    console.log("=======================================");
+    console.log("regC post /register");
+    console.log("=======================================");
     db.Registration.create({
         first_year: req.body.first_year,
         first_name: req.body.first_name,
