@@ -11,23 +11,16 @@
         <label class="label">First Name</label>
         <div class="field-body">
             <div class="field">
-                <p class="control is-expanded has-icons-left">
+                <p class="control is-expanded">
                     <input class="input" type="text" placeholder="Jane">
-                    <span class="icon is-small is-left">
-                        <i class="fas fa-user"></i>
-                    </span>
                 </p>
             </div>
         </div>
         <label class="label">Last Name</label>
         <div class="field-body">
             <div class="field">
-                <p class="control is-expanded has-icons-left">
+                <p class="control is-expanded">
                     <input class="input" type="text" placeholder="Doe">
-                    <span class="icon is-small is-left">
-                        <i class="fas fa-user"></i>
-                    </span>
-                </p>
             </div>
         </div>
     </div>
@@ -223,9 +216,7 @@
     </div>
 
     <div class="field">
-        <div class="field-label">
-            <label class="label">Will this be your first year at camp?</label>
-        </div>
+        <label class="label">Will this be your first year at camp?</label>
         <div class="field-body">
             <div class="field is-narrow">
                 <div class="control">
@@ -264,11 +255,20 @@
             </div>
         </div>
     </div>
-
+    {{#if volunteer}}
     {{> participants/participant-block volunteer=true}}
+    {{/if}}
 
+    {{#if childVolunteer}}
     {{> participants/participant-block childVolunteer=true}}
+    {{/if}}
 
+    {{#if participant}}
     {{> participants/participant-block participant=true}}
+    {{/if}}
+
+    {{#if boy}}
+    {{> participants/participant-block boy=true}}
+    {{/if}}
 
 </form>

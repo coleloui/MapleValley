@@ -8,7 +8,7 @@ router.get("/profile", function (req, res) {
     if (req.session.user) {
         res.render("profile", req.session.user)
     } else {
-        res.redirect("/login");
+        res.redirect("/index");
     }
 })
 
@@ -34,9 +34,9 @@ router.post("/signup", function (req, res) {
     })
 })
 
-router.get("/login", function (req, res) {
-    res.render("login");
-})
+// router.get("/login", function (req, res) {
+//     res.render("login");
+// })
 
 router.post("/login", function (req, res) {
     db.User.findOne({
