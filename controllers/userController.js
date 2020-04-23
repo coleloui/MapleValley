@@ -28,7 +28,7 @@ router.get("/profile", function (req, res) {
             );
         })
     } else {
-        res.redirect("/login");
+        res.redirect("/index");
     }
 })
 
@@ -54,9 +54,9 @@ router.post("/signup", function (req, res) {
     })
 })
 
-router.get("/login", function (req, res) {
-    res.render("index");
-})
+// router.get("/login", function (req, res) {
+//     res.render("login");
+// })
 
 router.post("/login", function (req, res) {
     db.User.findOne({
