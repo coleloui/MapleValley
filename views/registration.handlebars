@@ -1,8 +1,9 @@
 <form action="register" method="post">
 
+
     <div class="field columns">
         <div class="column is-1"></div>
-        <div class="field-body column is-3">
+        <div class="field-body column is-2">
             <label class="label">First Name</label>
             <div class="field">
                 <p class="control is-expanded">
@@ -10,7 +11,7 @@
                 </p>
             </div>
         </div>
-        <div class="field-body column is-3">
+        <div class="field-body column is-2">
             <label class="label">Last Name</label>
             <div class="field">
                 <p class="control is-expanded">
@@ -39,7 +40,7 @@
 
     <div class="field columns">
         <div class="column is-1"></div>
-        <div class="column is-4">
+        <div class="column is-3">
             <label class="label">Address</label>
             <div class="field-body">
                 <div class="field is-expanded">
@@ -235,11 +236,11 @@
 
     <div class="field">
         <div class="columns">
-                    <div class="column is-1"></div>
-        <label class="label column">Will this be your first year at camp?</label>
+            <div class="column is-1"></div>
+            <label class="label column">Will this be your first year at camp?</label>
         </div>
         <div class="field-body columns">
-                    <div class="column is-1"></div>
+            <div class="column is-1"></div>
             <div class="field is-narrow column">
                 <div class="control">
                     <label class="radio">
@@ -256,9 +257,13 @@
     </div>
 
     <div class="field">
-        <label class="label">What is your shirt size?</label>
-        <div class="field-body">
-            <div class="field is-narrow">
+        <div class="columns">
+            <div class="column is-1"></div>
+            <label class="label column">What is your shirt size?</label>
+        </div>
+        <div class="field-body columns">
+            <div class="column is-1"></div>
+            <div class="field is-narrow column">
                 <div class="control columns">
                     <div class="select column is-fullwidth">
                         <select>
@@ -277,8 +282,6 @@
             </div>
         </div>
     </div>
-
-
 
     {{#if volunteer}}
     {{> participants/participant-block volunteer=true}}
