@@ -28,7 +28,7 @@ router.get("/profile", function (req, res) {
             );
         })
     } else {
-        res.redirect("/index");
+        res.redirect("/profile");
     }
 })
 

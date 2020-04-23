@@ -91,7 +91,8 @@
                     <div class="field is-expanded">
                         <div class="field has-addons">
                             <p class="control is-expanded">
-                                <input class="input" name="emergency_contact_1_phone" type="tel" placeholder="(999) 999-9999">
+                                <input class="input" name="emergency_contact_1_phone" type="tel"
+                                    placeholder="(999) 999-9999">
                             </p>
                         </div>
                     </div>
@@ -101,7 +102,7 @@
         </div>
         <label class="label">Relationship</label>
         <div class="select">
-            <select name="emergency_contact_1_relationship" >
+            <select name="emergency_contact_1_relationship">
                 <option disabled selected hidden>Relationship</option>
                 <option>Spouse</option>
                 <option>Parent</option>
@@ -148,6 +149,7 @@
     </div>
 </div>
 
+<a href="/health?role=volunteer" class="button is-outlined">Volunteer</a>
 
 {{/if}}
 
@@ -156,6 +158,24 @@
 </br>
 <h1>I AM CHILD VOLUNTEER</h1>
 </br>
+
+<div class="columns">
+    <div class="column is-1"></div>
+    <div class="column">
+        <label class="label">What grade are you going into in the Fall?</label>
+        <div class="select">
+            <select name="Grade">
+                <option disabled selected hidden>Grade</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+        </div>
+    </div>
+</div>
 
 <div class="columns">
     <div class="column is-1"></div>
@@ -293,7 +313,8 @@
                     <div class="field is-expanded">
                         <div class="field has-addons">
                             <p class="control is-expanded">
-                                <input class="input" name="emergency_contact_1_phone" type="tel" placeholder="(999) 999-9999">
+                                <input class="input" name="emergency_contact_1_phone" type="tel"
+                                    placeholder="(999) 999-9999">
                             </p>
                         </div>
                     </div>
@@ -303,7 +324,7 @@
         </div>
         <label class="label">Relationship</label>
         <div class="select">
-            <select name="emergency_contact_1_relationship" >
+            <select name="emergency_contact_1_relationship">
                 <option disabled selected hidden>Relationship</option>
                 <option>Spouse</option>
                 <option>Parent</option>
@@ -350,7 +371,8 @@
                     <div class="field is-expanded">
                         <div class="field has-addons">
                             <p class="control is-expanded">
-                                <input class="input" name="emergency_contact_2_phone" type="tel" placeholder="(999) 999-9999">
+                                <input class="input" name="emergency_contact_2_phone" type="tel"
+                                    placeholder="(999) 999-9999">
                             </p>
                         </div>
                     </div>
@@ -360,7 +382,7 @@
         </div>
         <label class="label">Relationship</label>
         <div class="select">
-            <select name="emergency_contact_2_relationship" >
+            <select name="emergency_contact_2_relationship">
                 <option disabled selected hidden>Relationship</option>
                 <option>Spouse</option>
                 <option>Parent</option>
@@ -395,18 +417,43 @@
 <div class="columns">
     <div class="column is-1"></div>
     <div class="column">
-        <label class="label"Sweat Shirt Style</label>
-        <div class="select">
-            <select name="sweatshirt_style">
-                <option disabled selected hidden>Styles</option>
-                <option>Hoodie</option>
-                <option>Hoodie with Name</option>
-                <option>Zip-up</option>
-                <option>Zip-up with Name</option>
-            </select>
+        <label class="label" Sweat Shirt Style</label>
+            <div class="select">
+                <select name="sweatshirt_style">
+                    <option disabled selected hidden>Styles</option>
+                    <option>Hoodie</option>
+                    <option>Hoodie with Name</option>
+                    <option>Zip-up</option>
+                    <option>Zip-up with Name</option>
+                </select>
+            </div>
+    </div>
+</div>
+
+<div class="columns">
+    <div class="column is-1"></div>
+    <div class="column">
+        <div class="field">
+            <label class="label">Are you interested in being a volunteer?</label>
+            <div class="field-body">
+                <div class="field is-narrow">
+                    <div class="control">
+                        <label class="radio">
+                            <input type="radio" name="member">
+                            Yes
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="member">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<a href="/health?role=childVolunteer" class="button is-outlined">Health Info</a>
 
 {{/if}}
 
@@ -417,6 +464,25 @@
 </br>
 <h1>I AM Participant</h1>
 </br>
+
+<div class="columns">
+    <div class="column is-1"></div>
+    <div class="column">
+        <label class="label">What grade are you going into in the Fall?</label>
+        <div class="select">
+            <select name="Grade">
+                <option disabled selected hidden>Grade</option>
+                <option>K</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </select>
+        </div>
+    </div>
+</div>
 
 <div class="columns">
     <div class="column is-1"></div>
@@ -584,7 +650,8 @@
                     <div class="field is-expanded">
                         <div class="field has-addons">
                             <p class="control is-expanded">
-                                <input class="input" name="emergency_contact_1_phone" type="tel" placeholder="(999) 999-9999">
+                                <input class="input" name="emergency_contact_1_phone" type="tel"
+                                    placeholder="(999) 999-9999">
                             </p>
                         </div>
                     </div>
@@ -594,7 +661,7 @@
         </div>
         <label class="label">Relationship</label>
         <div class="select">
-            <select name="emergency_contact_1_relationship" >
+            <select name="emergency_contact_1_relationship">
                 <option disabled selected hidden>Relationship</option>
                 <option>Spouse</option>
                 <option>Parent</option>
@@ -641,7 +708,8 @@
                     <div class="field is-expanded">
                         <div class="field has-addons">
                             <p class="control is-expanded">
-                                <input class="input" name="emergency_contact_2_phone" type="tel" placeholder="(999) 999-9999">
+                                <input class="input" name="emergency_contact_2_phone" type="tel"
+                                    placeholder="(999) 999-9999">
                             </p>
                         </div>
                     </div>
@@ -651,7 +719,7 @@
         </div>
         <label class="label">Relationship</label>
         <div class="select">
-            <select name="emergency_contact_2_relationship" >
+            <select name="emergency_contact_2_relationship">
                 <option disabled selected hidden>Relationship</option>
                 <option>Spouse</option>
                 <option>Parent</option>
@@ -662,6 +730,31 @@
         </div>
     </div>
 </div>
+
+<div class="columns">
+    <div class="column is-1"></div>
+    <div class="column">
+        <div class="field">
+            <label class="label">Are you interested in being a volunteer?</label>
+            <div class="field-body">
+                <div class="field is-narrow">
+                    <div class="control">
+                        <label class="radio">
+                            <input type="radio" name="member">
+                            Yes
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="member">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="/health?role=participant" class="button is-outlined">Health Info</a>
 
 {{/if}}
 
@@ -751,7 +844,8 @@
                     <div class="field is-expanded">
                         <div class="field has-addons">
                             <p class="control is-expanded">
-                                <input class="input" name="emergency_contact_1_phone" type="tel" placeholder="(999) 999-9999">
+                                <input class="input" name="emergency_contact_1_phone" type="tel"
+                                    placeholder="(999) 999-9999">
                             </p>
                         </div>
                     </div>
@@ -761,7 +855,7 @@
         </div>
         <label class="label">Relationship</label>
         <div class="select">
-            <select name="emergency_contact_1_relationship" >
+            <select name="emergency_contact_1_relationship">
                 <option disabled selected hidden>Relationship</option>
                 <option>Spouse</option>
                 <option>Parent</option>
@@ -806,7 +900,8 @@
                     <div class="field is-expanded">
                         <div class="field has-addons">
                             <p class="control is-expanded">
-                                <input class="input" name="emergency_contact_2_phone" type="tel" placeholder="(999) 999-9999">
+                                <input class="input" name="emergency_contact_2_phone" type="tel"
+                                    placeholder="(999) 999-9999">
                             </p>
                         </div>
                     </div>
@@ -816,7 +911,7 @@
         </div>
         <label class="label">Relationship</label>
         <div class="select">
-            <select name="emergency_contact_2_relationship" >
+            <select name="emergency_contact_2_relationship">
                 <option disabled selected hidden>Relationship</option>
                 <option>Spouse</option>
                 <option>Parent</option>
@@ -828,5 +923,7 @@
     </div>
 </div>
 </div>
+
+<a href="/health?role=boy" class="button is-outlined">Health Info</a>
 
 {{/if}}
