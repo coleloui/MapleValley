@@ -90,10 +90,30 @@ router.route("/:id").get((req, res) => {
         registration_confirmed: req.body.registration_confirmed,
         troop_number: req.body.troop_number,
         service_unit_number: req.body.service_unit_number,
-        authorized_release_names: req.body.authorized_release_names
-    }, {
-        where: {
-            id: req.params.id
+        authorized_release_names: req.body.authorized_release_names,
+
+        guardian_first_name: req.body.guardian_first_name, 
+        guardian_last_name: req.body.guardian_last_name, 
+        address_street: req.body.address_street, 
+        address_city: req.body.address_city, 
+        address_state: req.body.address_state, 
+        address_zip: req.body.address_zip, 
+        phone_cell: req.body.phone_cell, 
+        phone_home: req.body.phone_home, 
+        phone_work: req.body.phone_work, 
+        phone_work_extension: req.body.phone_work_extension, 
+        email: req.body.email, 
+        emergency_contact_1_name: req.body.emergency_contact_1_name, 
+        emergency_contact_1_phone: req.body.emergency_contact_1_phone, 
+        emergency_contact_1_relationship: req.body.emergency_contact_1_relationship, 
+        emergency_contact_2_name: req.body.emergency_contact_2_name, 
+        emergency_contact_2_phone: req.body.emergency_contact_2_phone, 
+        emergency_contact_2_relationship: req.body.emergency_contact_2_relationship, 
+        contact_for_volunteer: req.body.contact_for_volunteer,
+
+    },{
+        where:{
+            id:req.params.id
         }
     }).then(updatedDbRegistration => {
         res.status(200).json(updatedDbRegistration);
