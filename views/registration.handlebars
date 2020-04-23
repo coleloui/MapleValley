@@ -1,90 +1,106 @@
-<form action="register" method="post">
+<form action="/api.registration/register" method="post">
 
-    <div class="field">
-        <label class="label">First Name</label>
-        <div class="field-body">
+
+    <div class="field columns">
+        <div class="column is-1"></div>
+        <div class="field-body column is-2">
+            <label class="label">First Name</label>
             <div class="field">
-                <p class="control is-expanded has-icons-left">
-                    <input class="input" type="text" placeholder="Jane">
-                    <span class="icon is-small is-left">
-                        <i class="fas fa-user"></i>
-                    </span>
+                <p class="control is-expanded">
+                    <input class="input" name="first_name" type="text" placeholder="Jane">
                 </p>
             </div>
         </div>
-        <label class="label">Last Name</label>
-        <div class="field-body">
+        <div class="field-body column is-2">
+            <label class="label">Last Name</label>
             <div class="field">
-                <p class="control is-expanded has-icons-left">
-                    <input class="input" type="text" placeholder="Doe">
-                    <span class="icon is-small is-left">
-                        <i class="fas fa-user"></i>
-                    </span>
-                </p>
+                <p class="control is-expanded">
+                    <input class="input" name="last_name" type="text" placeholder="Doe">
             </div>
         </div>
+        <div class="column is-1"></div>
     </div>
 
-    <div class="field">
-        <label class="label">Phone Number</label>
-        <div class="field-body">
-            <div class="field is-expanded">
-                <div class="field has-addons">
+    <div class="columns">
+        <div class="column is-1"></div>
+        <div class="field column is-2">
+            <label class="label">Cell Number</label>
+            <div class="field-body">
+                <div class="field is-expanded">
+                    <div class="field has-addons">
+                        <p class="control is-expanded">
+                            <input class="input" name="phone_cell" type="tel" placeholder="(999) 999-9999">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-7"></div>
+    </div>
+
+    <div class="field columns">
+        <div class="column is-1"></div>
+        <div class="column is-3">
+            <label class="label">Address</label>
+            <div class="field-body">
+                <div class="field is-expanded">
+                    <div class="field has-addons">
+                        <p class="control is-expanded">
+                            <input class="input" name="address_street" type="text" placeholder="12345 Imaginary Rd">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-1"></div>
+    </div>
+
+    <div class="field columns">
+        <div class="column is-1"></div>
+        <div class="column is-2">
+            <label class="label">City</label>
+            <div class="field-body">
+                <div class="field">
                     <p class="control is-expanded">
-                        <input class="input" type="tel" placeholder="(999) 999-9999">
+                        <input class="input" name="address_city" type="text" placeholder="Seattle">
                     </p>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="field">
-        <label class="label">Address</label>
-        <div class="field-body">
-            <div class="field is-expanded">
-                <div class="field has-addons">
+        <div class="column is-2">
+            <label class="label">State</label>
+            <div class="field-body">
+                <div class="field">
                     <p class="control is-expanded">
-                        <input class="input" type="text" placeholder="12345 Imaginary Rd">
+                        <input class="input" name="address_state" type="text" placeholder="Washington">
                     </p>
                 </div>
             </div>
         </div>
+        <div class="column is-1">
+            <label class="label">Zip Code</label>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control is-expanded">
+                        <input class="input" name="address_zip" type="text" placeholder="99999">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="column is-1"></div>
     </div>
 
     <div class="field">
-        <label class="label">City</label>
-        <div class="field-body">
-            <div class="field">
-                <p class="control is-expanded">
-                    <input class="input" type="text" placeholder="Seattle">
-                </p>
-            </div>
+        <div class="columns">
+            <div class="column is-1"></div>
+            <label class="label column">Birth date</label>
         </div>
-        <label class="label">State</label>
-        <div class="field-body">
-            <div class="field">
-                <p class="control is-expanded">
-                    <input class="input" type="text" placeholder="Washington">
-                </p>
-            </div>
-        </div>
-        <label class="label">Zip Code</label>
-        <div class="field-body">
-            <div class="field">
-                <p class="control is-expanded">
-                    <input class="input" type="text" placeholder="99999">
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="field">
-        <label class="label">Birth date</label>
-        <div class="field-body">
-            <div class="field is-narrow">
+        <div class="field-body columns">
+            <div class="column is-1"></div>
+            <div class="field is-narrow column">
                 <div class="control columns">
                     <div class="select column is-fullwidth">
-                        <select>
+                        <select name="birth_month" >
                             <option disabled selected hidden>Month</option>
                             <option>January</option>
                             <option>February</option>
@@ -101,7 +117,7 @@
                         </select>
                     </div>
                     <div class="select column is-fullwidth">
-                        <select>
+                        <select name="birth_day" >
                             <option disabled selected hidden>Day</option>
                             <option>1</option>
                             <option>2</option>
@@ -137,7 +153,7 @@
                         </select>
                     </div>
                     <div class="select column is-fullwidth">
-                        <select>
+                        <select name="birth_year" >
                             <option disabled selected hidden>Year</option>
                             <option>2018</option>
                             <option>2017</option>
@@ -215,19 +231,24 @@
         </div>
     </div>
 
+    </br>
+    </br>
+
     <div class="field">
-        <div class="field-label">
-            <label class="label">Will this be your first year at camp?</label>
+        <div class="columns">
+            <div class="column is-1"></div>
+            <label class="label column">Will this be your first year at camp?</label>
         </div>
-        <div class="field-body">
-            <div class="field is-narrow">
+        <div class="field-body columns">
+            <div class="column is-1"></div>
+            <div class="field is-narrow column">
                 <div class="control">
                     <label class="radio">
-                        <input type="radio" name="year">
+                        <input type="radio" name="first_year_yes">
                         Yes
                     </label>
                     <label class="radio">
-                        <input type="radio" name="year">
+                        <input type="radio" name="first_year_no">
                         No
                     </label>
                 </div>
@@ -236,12 +257,16 @@
     </div>
 
     <div class="field">
-        <label class="label">What is your shirt size?</label>
-        <div class="field-body">
-            <div class="field is-narrow">
+        <div class="columns">
+            <div class="column is-1"></div>
+            <label class="label column">What is your shirt size?</label>
+        </div>
+        <div class="field-body columns">
+            <div class="column is-1"></div>
+            <div class="field is-narrow column">
                 <div class="control columns">
                     <div class="select column is-fullwidth">
-                        <select>
+                        <select name="t_shirt_size" >
                             <option>YS</option>
                             <option>YM</option>
                             <option>YL</option>
@@ -258,10 +283,20 @@
         </div>
     </div>
 
+    {{#if volunteer}}
     {{> participants/participant-block volunteer=true}}
+    {{/if}}
 
+    {{#if childVolunteer}}
     {{> participants/participant-block childVolunteer=true}}
+    {{/if}}
 
+    {{#if participant}}
     {{> participants/participant-block participant=true}}
+    {{/if}}
+
+    {{#if boy}}
+    {{> participants/participant-block boy=true}}
+    {{/if}}
 
 </form>

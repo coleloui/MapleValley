@@ -1,4 +1,55 @@
-<h1 class="title">this is just a placeholder for now</h1>
 
 
-<a href="/role" class="button" type="submit">Register for Camp!</a>
+
+<div class='columns' >
+<div class="container column is-three-quarters is-center">
+
+        <div class="card">
+
+           <h1 class="title">Your registrations for Current Events:</h1>
+            <a href="/role" class="button is-success" type="submit">Register more people for SummerCamp!</a>
+            <br>
+
+            
+       
+{{#each data}}
+
+<div class="card">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-48x48">
+          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-4">{{dataValues.first_name}} {{dataValues.last_name}}</p>
+        <p class="subtitle is-6">{{dataValues.email}}</p>
+      </div>
+    </div> 
+
+    <div class="content">
+      <p class="subtitle is-6">Unit Number: {{dataValues.service_unit_number}}</p>
+      <p class="subtitle is-6">Troop Number: {{dataValues.troop_number}}</p>
+      <p class="subtitle is-6">Authorized Names: {{dataValues.authorized_release_names}}</p>
+      <time >Registration Date: {{dataValues.createdAt}}</time>
+      <br>
+      <div class="buttons">
+      <button class="button is-info">Review your Info</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+
+ </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
