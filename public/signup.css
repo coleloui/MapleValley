@@ -1,0 +1,30 @@
+body {
+    background-color: #00AE58;
+    
+   
+    
+
+  background-image: url("paper.gif");
+  
+
+
+   
+
+};
+
+.bg {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tsuga_heterophylla_near_Rainier.jpg/1200px-Tsuga_heterophylla_near_Rainier.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+      
+}
+
+#logo {
+    
+    width: 100px;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
