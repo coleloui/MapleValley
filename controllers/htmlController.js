@@ -11,7 +11,26 @@ router.get("/role",(req,res)=>{
 });
 
 router.get("/registration",(req,res)=>{
-    res.render("registration");
+    const newObj = {};
+    switch (req.query.role) {
+        case "volunteer":
+            newObj.volunteer=true;
+            break;
+        case "childVolunteer":
+            newObj.childVolunteer=true;
+            break;
+        case "participant":
+            newObj.participant=true;
+            break;
+        case "boy":
+            newObj.boy=true;
+            break;
+    
+        default:
+            break;
+    }
+    console.log(newObj);
+    res.render("registration",newObj);
 });
 
 
