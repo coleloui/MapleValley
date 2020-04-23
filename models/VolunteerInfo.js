@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
     var VolunteerInfo = sequelize.define('VolunteerInfo',{
-
+        
         camp_name: DataTypes.STRING, 
         sweatshirt_size: DataTypes.STRING, 
         sweatshirt_style: DataTypes.STRING, 
