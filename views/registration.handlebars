@@ -1,18 +1,11 @@
-<form action="register" method="post">
+<form action="/api.registration/register" method="post">
 
-          <div class="field">
-            <p class="control">
-              <button class="button">
-                Register
-              </button>
-            </p>
-          </div>
     <div class="field">
         <label class="label">First Name</label>
         <div class="field-body">
             <div class="field">
                 <p class="control is-expanded">
-                    <input class="input" type="text" placeholder="Jane">
+                    <input class="input" name="first_name" type="text" placeholder="Jane">
                 </p>
             </div>
         </div>
@@ -20,7 +13,7 @@
         <div class="field-body">
             <div class="field">
                 <p class="control is-expanded">
-                    <input class="input" type="text" placeholder="Doe">
+                    <input class="input" name="last_name" type="text" placeholder="Doe">
             </div>
         </div>
     </div>
@@ -31,7 +24,7 @@
             <div class="field is-expanded">
                 <div class="field has-addons">
                     <p class="control is-expanded">
-                        <input class="input" type="tel" placeholder="(999) 999-9999">
+                        <input class="input" name="phone_cell" type="tel" placeholder="(999) 999-9999">
                     </p>
                 </div>
             </div>
@@ -44,7 +37,7 @@
             <div class="field is-expanded">
                 <div class="field has-addons">
                     <p class="control is-expanded">
-                        <input class="input" type="text" placeholder="12345 Imaginary Rd">
+                        <input class="input" name="address_street" type="text" placeholder="12345 Imaginary Rd">
                     </p>
                 </div>
             </div>
@@ -56,7 +49,7 @@
         <div class="field-body">
             <div class="field">
                 <p class="control is-expanded">
-                    <input class="input" type="text" placeholder="Seattle">
+                    <input class="input" name="address_city" type="text" placeholder="Seattle">
                 </p>
             </div>
         </div>
@@ -64,7 +57,7 @@
         <div class="field-body">
             <div class="field">
                 <p class="control is-expanded">
-                    <input class="input" type="text" placeholder="Washington">
+                    <input class="input" name="address_state" type="text" placeholder="Washington">
                 </p>
             </div>
         </div>
@@ -72,11 +65,19 @@
         <div class="field-body">
             <div class="field">
                 <p class="control is-expanded">
-                    <input class="input" type="text" placeholder="99999">
+                    <input class="input" name="address_zip" type="text" placeholder="99999">
                 </p>
             </div>
         </div>
     </div>
+
+          <div class="field">
+            <p class="control">
+              <button class="button">
+                Register
+              </button>
+            </p>
+          </div>
 
     <div class="field">
         <label class="label">Birth date</label>
@@ -84,7 +85,7 @@
             <div class="field is-narrow">
                 <div class="control columns">
                     <div class="select column is-fullwidth">
-                        <select>
+                        <select name="birth_month" >
                             <option disabled selected hidden>Month</option>
                             <option>January</option>
                             <option>February</option>
@@ -101,7 +102,7 @@
                         </select>
                     </div>
                     <div class="select column is-fullwidth">
-                        <select>
+                        <select name="birth_day" >
                             <option disabled selected hidden>Day</option>
                             <option>1</option>
                             <option>2</option>
@@ -137,7 +138,7 @@
                         </select>
                     </div>
                     <div class="select column is-fullwidth">
-                        <select>
+                        <select name="birth_year" >
                             <option disabled selected hidden>Year</option>
                             <option>2018</option>
                             <option>2017</option>
@@ -221,11 +222,11 @@
             <div class="field is-narrow">
                 <div class="control">
                     <label class="radio">
-                        <input type="radio" name="year">
+                        <input type="radio" name="first_year_yes">
                         Yes
                     </label>
                     <label class="radio">
-                        <input type="radio" name="year">
+                        <input type="radio" name="first_year_no">
                         No
                     </label>
                 </div>
@@ -239,7 +240,7 @@
             <div class="field is-narrow">
                 <div class="control columns">
                     <div class="select column is-fullwidth">
-                        <select>
+                        <select name="t_shirt_size" >
                             <option>YS</option>
                             <option>YM</option>
                             <option>YL</option>
