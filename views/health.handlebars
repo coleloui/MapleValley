@@ -3,24 +3,26 @@
     <div class="columns">
         <div class="column is-1"></div>
         <div class="column">
-            <h1 class="title has-text-centered">Health History</h1>
+            </br>
             <div class="field">
-                <label class="label has-text-centered">Are all immunizations up to date?</label>
-                <div class="field-body">
-                    <div class="field is-grouped is-grouped-centered">
-                        <div class="control">
-                            <label class="radio">
-                                <input type="radio" name="immunization_yes">
-                                Yes
-                            </label>
-                            <label class="radio">
-                                <input type="radio" name="immunization_no">
-                                No
-                            </label>
+                <div class="box">
+                    <h1 class="title has-text-centered">Health History</h1>
+                    <label class="label has-text-centered">Are all immunizations up to date?</label>
+                    <div class="field-body">
+                        <div class="field is-grouped is-grouped-centered">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="immunization_yes">
+                                    Yes
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="immunization_no">
+                                    No
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
-                </br>
                 <div class="box">
                     <h2 class="title has-text-centered">Chronic Illness, please select yes to those that apply.</h2>
                     <div class="columns">
@@ -665,11 +667,11 @@
 
 
             {{#unless volunteer}}
-            {{> medication/medications-block volunteer=true}}
+            {{> medication/medications-block volunteer=false}}
             {{/unless}}
 
             {{#if volunteer}}
-            {{> medication/medications-block volunteer=false}}
+            {{> medication/medications-block volunteer=true}}
             {{/if}}
         </div>
         <div class="column is-1"></div>
