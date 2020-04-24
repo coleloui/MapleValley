@@ -65,12 +65,22 @@ router.post("/login", function (req, res) {
         }
     }).then(dbUser => {
         if (bcrypt.compareSync(req.body.password, dbUser.password)) {
-            req.session.user = {
-                username: dbUser.username,
-                id: dbUser.id
-            };
-            // res.send("logged in!")
-            res.redirect('/profile')
+                    if(dbUser.username ==='vale@mail.com'){
+                        req.session.user = {
+                            username: dbUser.username,
+                            id: dbUser.id
+                        };
+                        
+                        res.redirect('/managerprofile')
+                    }
+                    else{
+                        req.session.user = {
+                        username: dbUser.username,
+                        id: dbUser.id
+                        };
+                    
+                        res.redirect('/profile')
+                        }
         } else {
             res.send("not logged in")
         }
