@@ -3,7 +3,8 @@ const router = express.Router();
 const db = require("../models");
 
 
-router.get('/', (req,res)=>{
+router.get('/', (req,res)=>{ 
+    
     db.VolunteerInfo.findAll().then( dbVolunteerInfo=> {
              res.json(dbVolunteerInfo);
     })
