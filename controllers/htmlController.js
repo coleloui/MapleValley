@@ -14,6 +14,9 @@ router.get("/health",(req,res)=>{
     console.log(req.query.role)
     const newObj = {};
     switch (req.query.role) {
+        case "volunteer":
+            newObj.volunteer=true;
+            break;
         case "childVolunteer":
             newObj.childVolunteer=true;
             break;
