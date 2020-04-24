@@ -1,0 +1,680 @@
+<form action="/api.health" method="post">
+
+    <div class="columns">
+        <div class="column is-1"></div>
+        <div class="column">
+            </br>
+            <div class="field">
+                <div class="box">
+                    <h1 class="title has-text-centered">Health History</h1>
+                </div>
+                <div class="box">
+                    <h2 class="title has-text-centered">Chronic Illness, please select yes to those that apply.</h2>
+                    <div class="columns">
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Asthma</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Bleeding or Clotting Disorder</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="_yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Diabetes</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Ear Infection</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Heart defect or Heart disease</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Hypertension</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Muskuloskeletal disorder</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Seizures</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h2 class="title has-text-centered">Since last medical exam has the participant had:</h2>
+                    <div class="columns">
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Are all immunizations up to date?</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="immunization_yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="immunization_no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Any restrictions concerning physical
+                                    activity?</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Any exposure to a contagious disease?</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">A surgical procedure?</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Any prescribed or over the counter
+                                    medications?</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Treatment in a hospital or emergency?</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Serious injury or fracture requiring medical
+                                    attention?</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="_no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="label has-text-centered">An illness lasting more than five days?</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label">If you answered yes to any of the above please explain:</label>
+                    <textarea class="textarea" placeholder="Recent Health information"></textarea>
+                </div>
+                <div class="box">
+                    <h2 class="title has-text-centered">Allergies, please select yes to those that apply.</h2>
+                    <div class="columns">
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Animals</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Food</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Hayfever</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Insect Stings</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Medication or Drugs</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Plants</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Pollen</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label">If you answered yes to any of the above please explain:</label>
+                    <textarea class="textarea" placeholder="Allergies information"></textarea>
+                </div>
+                <div class="box">
+                    <h2 class="title has-text-centered">Other Health Concerns, please select yes to those that apply.
+                    </h2>
+                    <div class="columns">
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Bedwetting</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Constipation</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Emotional Disturbances</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Fainting</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="registered_girl_scout_yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="registered_girl_scout_no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Hearing Impairment</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Menstrual Cramps</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Motion Sickness</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Nosebleeds</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Sickle Cell Trait or Disease</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container column is-one-quarter">
+                            <div class="field">
+                                <label class="label has-text-centered">Sleep Disturbances</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Special Diet Regime</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label has-text-centered">Wears Glasses or Contact Lens</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label">If you answered yes to any of the above please explain:</label>
+                    <textarea class="textarea" placeholder="Other Health Concerns information"></textarea>
+                </div>
+            </div>
+
+
+            {{#unless volunteer}}
+            {{> medication/medications-block volunteer=false}}
+            {{/unless}}
+
+            {{#if volunteer}}
+            {{> medication/medications-block volunteer=true}}
+            {{/if}}
+        </div>
+        <div class="column is-1"></div>
+    </div>
+
+</form>

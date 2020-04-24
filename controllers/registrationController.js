@@ -59,7 +59,9 @@ router.post('/register', (req, res) => {
         emergency_contact_2_name: eContact2Name,
         emergency_contact_2_phone: req.body.emergency_contact_2_phone,
         emergency_contact_2_relationship: req.body.emergency_contact_2_relationship,
-        contact_for_volunteer: falseString // canContactForVolunteer, not in questions yet
+        contact_for_volunteer: falseString, // canContactForVolunteer, not in questions yet
+
+        EventId: 1 // a hook for later when there are more events
     };
 
     console.log(registrationObj);
