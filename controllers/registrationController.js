@@ -15,12 +15,18 @@ router.post('/register', (req, res) => {
     const trueString = "1";
     const falseString = "0";
 
-    const isFirstYear = req.body.first_year_yes === "on" ? trueString : falseString;
-    const isRegisteredGS = req.body.registered_girl_scout_yes === "on" ? trueString : falseString;
-    // const canContactForVolunteer = req.body.contact_for_volunteer === "on" ? trueString : falseString;
+    console.log("=============================================================");
+    console.log(req.body.service_unit_number);
+    console.log(req.body.birth_month);
+    console.log(req.body.birth_day);
+    console.log(req.body.birth_year);
+    console.log("=============================================================");
 
-
-    // need to figure out how to tell if it is empty and adjust logic (email check of undefined not working as I was hoping)
+    const isNull = req.body.minorEmail === null;
+    console.log(isNull);
+    
+    // values that need concatenation first
+    // need to figure out how to tell if it is empty and adjust logic (email check of undefined not working as I was hoping) null?
     const birthdate = new Date(`${req.body.birth_month} ${req.body.birth_day}, ${req.body.birth_year}`);
     const email = req.body.minorEmail !== undefined ? (req.body.adultEmail + ", " + req.body.minorEmail) : req.body.email;
     const eContact1Name = req.body.emergency_contact_1_first_name + " " + req.body.emergency_contact_1_last_name;
@@ -29,14 +35,14 @@ router.post('/register', (req, res) => {
 
     const registrationObj = {
 
-        first_year: isFirstYear,
+        first_year: req.body.first_year === "yes" ? trueString : falseString,
         first_name: req.body.first_name,
         last_name: req.body.last_name,
         birthdate: birthdate,
-        // grade_in_school: req.body.grade_in_school, // not in questions yet
+        grade_in_school: req.body.grade_in_school, // needs to say Adult/Boy/Cherub...
         t_shirt_size: req.body.t_shirt_size,
         buddy_request: buddyName,
-        registered_girl_scout: isRegisteredGS,
+        registered_girl_scout: req.body.registered_girl_scout === "yes" ? trueString : falseString,
         registration_confirmed: falseString,
         troop_number: req.body.troop_number,
         service_unit_number: req.body.service_unit_number,
@@ -59,7 +65,7 @@ router.post('/register', (req, res) => {
         emergency_contact_2_name: eContact2Name,
         emergency_contact_2_phone: req.body.emergency_contact_2_phone,
         emergency_contact_2_relationship: req.body.emergency_contact_2_relationship,
-        contact_for_volunteer: falseString, // canContactForVolunteer, not in questions yet
+        contact_for_volunteer: req.body.contact_for_volunteer === "yes" ? trueString : falseString,
 
         EventId: 1 // a hook for later when there are more events
     };
@@ -88,7 +94,8 @@ router.post('/register', (req, res) => {
             
                     console.log(newVolunteerInfo);
 
-                    res.redirect("/profile");
+                    // res.redirect("/profile");
+                    res.redirect(`/health?role=boy&regId=${newRegistration.id}`)
                     // res.status(200).json(newRegistration);
                 });
 

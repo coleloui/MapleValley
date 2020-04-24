@@ -100,7 +100,7 @@
             <div class="field is-narrow column">
                 <div class="control columns">
                     <div class="select column is-fullwidth">
-                        <select name="birth_month" >
+                        <select name="birth_month">
                             <option disabled selected hidden>Month</option>
                             <option>January</option>
                             <option>February</option>
@@ -117,7 +117,7 @@
                         </select>
                     </div>
                     <div class="select column is-fullwidth">
-                        <select name="birth_day" >
+                        <select name="birth_day">
                             <option disabled selected hidden>Day</option>
                             <option>1</option>
                             <option>2</option>
@@ -153,7 +153,7 @@
                         </select>
                     </div>
                     <div class="select column is-fullwidth">
-                        <select name="birth_year" >
+                        <select name="birth_year">
                             <option disabled selected hidden>Year</option>
                             <option>2018</option>
                             <option>2017</option>
@@ -244,11 +244,11 @@
             <div class="field is-narrow column">
                 <div class="control">
                     <label class="radio">
-                        <input type="radio" name="first_year_yes">
+                        <input type="radio" name="first_year" value="yes">
                         Yes
                     </label>
                     <label class="radio">
-                        <input type="radio" name="first_year_no">
+                        <input type="radio" name="first_year" value="no">
                         No
                     </label>
                 </div>
@@ -266,7 +266,7 @@
             <div class="field is-narrow column">
                 <div class="control columns">
                     <div class="select column is-fullwidth">
-                        <select name="t_shirt_size" >
+                        <select name="t_shirt_size">
                             <option>YS</option>
                             <option>YM</option>
                             <option>YL</option>
@@ -298,5 +298,14 @@
     {{#if boy}}
     {{> participants/participant-block boy=true}}
     {{/if}}
+
+
+    <div class="field">
+        <p class="control">
+            <button class="button">
+                Register
+            </button>
+        </p>
+    </div>
 
 </form>

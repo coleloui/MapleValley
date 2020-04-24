@@ -11,7 +11,7 @@ module.exports = function (sequelize, DataTypes) {
         buddy_request: DataTypes.STRING,
         registered_girl_scout: DataTypes.BOOLEAN,
         registration_confirmed: DataTypes.BOOLEAN,
-        troop_number: DataTypes.INTEGER, 
+        troop_number: DataTypes.STRING,
         service_unit_number: DataTypes.INTEGER,
         authorized_release_names: DataTypes.TEXT,
 

@@ -11,8 +11,15 @@ router.get("/role",(req,res)=>{
 });
 
 router.get("/health",(req,res)=>{
+    console.log("==================================================")
     console.log(req.query.role)
+    console.log(req.query.regId);
+    console.log("==================================================")
+
+    const regId = req.query.regId;
     const newObj = {};
+    newObj.regId = regId;
+            
     switch (req.query.role) {
         case "childVolunteer":
             newObj.childVolunteer=true;
