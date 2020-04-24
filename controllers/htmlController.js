@@ -66,7 +66,7 @@ router.get("/grade/:id",(req,res)=>{
         const register = {data: results};
         console.log(register);
         console.log(results);
-    res.render("managerGrade",register);
+    res.render("managerGrade", register);
 });
 });
 
@@ -81,8 +81,8 @@ router.get("/camper/:id",(req,res)=>{
     .then(results=>{
         // const register = {data: results};
         // console.log(register);
-        console.log(results.dataValues);
-    res.render("managerCamper",results.dataValues);
+        console.log(results);
+    res.render("managerCamper",results);
     
 });
     
