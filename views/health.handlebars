@@ -662,16 +662,14 @@
                     <textarea class="textarea" placeholder="Other Health Concerns information"></textarea>
                 </div>
             </div>
-            {{#if childVolunteer}}
-            {{> medication/medications-block childVolunteer=true}}
-            {{/if}}
 
-            {{#if participant}}
-            {{> medication/medications-block participant=true}}
-            {{/if}}
 
-            {{#if boy}}
-            {{> medication/medications-block boy=true}}
+            {{#unless volunteer}}
+            {{> medication/medications-block volunteer=true}}
+            {{/unless}}
+
+            {{#if volunteer}}
+            {{> medication/medications-block volunteer=false}}
             {{/if}}
         </div>
         <div class="column is-1"></div>
