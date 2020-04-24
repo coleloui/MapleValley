@@ -1,0 +1,30 @@
+<table class="table is-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Buddy Requests</th>
+      <th>Food Allergy</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Name</th>
+      <th>Buddy Requests</th>
+      <th>Food Allergy</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    
+
+    {{#each data}}
+    <tr>
+        <td><a href="/camper/{{dataValues.id}}">{{dataValues.first_name}} {{dataValues.last_name}}</a> 
+        <th>{{dataValues.buddy_request}}</th>
+        <th>Food Allergy</th>
+    </tr>
+    {{/each}}
+
+
+    
+  </tbody>
+</table>

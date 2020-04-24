@@ -37,9 +37,9 @@ module.exports = function (sequelize, DataTypes) {
 
     Registration.associate = function(models){
         // Registration.hasMany(models.FamilyInfo, {onDelete: "cascade"});
-        Registration.hasMany(models.MedicationPermit, {onDelete: "cascade"});
-        Registration.hasMany(models.HealthHistory, {onDelete: "cascade"});
-        Registration.hasMany(models.VolunteerInfo, {onDelete: "cascade"});
+        Registration.hasOne(models.MedicationPermit, {onDelete: "cascade"});
+        Registration.hasOne(models.HealthHistory, {onDelete: "cascade"});
+        Registration.hasOne(models.VolunteerInfo, {onDelete: "cascade"});
         Registration.belongsTo(models.Event)
         // Registration.hasMany(models.Event, {onDelete: "cascade"});
     };
