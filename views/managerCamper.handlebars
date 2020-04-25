@@ -1,395 +1,388 @@
+<div class="columns">
+  <div class="column is-1"></div>
+  <div class="column">
+    <div class="box">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>CAMPER"S INFO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>First Name:</th>
+            <th>{{first_name}}</th>
+          </tr>
+          <tr>
+            <th>Last Name:</th>
+            <th>{{last_name}}</th>
+          </tr>
+          <tr>
+            <th>Birthdate:</th>
+            <th>{{birthdate}}</th>
+          </tr>
+          <tr>
+            <th>Grade in School:</th>
+            <th>{{grade_in_school}}</th>
+          </tr>
+          <tr>
+            <th>T-Shirt Size:</th>
+            <th>{{t_shirt_size}}</th>
+          </tr>
+          <tr>
+            <th>Buddy Requests:</th>
+            <th>{{buddy_request}}</th>
+          </tr>
+          <tr>
+            <th>Troop Number:</th>
+            <th>{{troop_number}}</th>
+          </tr>
+          <tr>
+            <th>Service Unit Number:</th>
+            <th>{{service_unit_number}}</th>
+          </tr>
+          <tr>
+            <th>Authorized Release Names:</th>
+            <th>{{authorized_release_names}}</th>
+          </tr>
+          <tr>
+            <th>Guardian First Name:</th>
+            <th>{{guardian_first_name}}</th>
+          </tr>
+          <tr>
+            <th>Guardian Last Name:</th>
+            <th>{{guardian_last_name}}</th>
+          </tr>
+          <tr>
+            <th>Address:</th>
+            <th>{{address_street}}</th>
+          </tr>
+          <tr>
+            <th>City:</th>
+            <th>{{address_city}}</th>
+          </tr>
+          <tr>
+            <th>State:</th>
+            <th>{{address_state}}</th>
+          </tr>
+          <tr>
+            <th>Zip Code:</th>
+            <th>{{address_zip}}</th>
+          </tr>
+          <tr>
+            <th>Cell Phone:</th>
+            <th>{{phone_cell}}</th>
+          </tr>
+          <tr>
+            <th>Home Phone:</th>
+            <th>{{phone_home}}</th>
+          </tr>
+          <tr>
+            <th>Work Phone:</th>
+            <th>{{phone_work}}</th>
+          </tr>
+          <tr>
+            <th>Work Phone EXT:</th>
+            <th>{{phone_work_extension}}</th>
+          </tr>
+          <tr>
+            <th>Email Address:</th>
+            <th>{{email}}</th>
+          </tr>
+          <tr>
+            <th>First Emergency Contact Name:</th>
+            <th>{{emergency_contact_1_name}}</th>
+          </tr>
+          <tr>
+            <th>Phone Number:</th>
+            <th>{{emergency_contact_1_phone:}}</th>
+          </tr>
+          <tr>
+            <th>Relation to Camper:</th>
+            <th>{{emergency_contact_1_relationship:}}</th>
+          </tr>
+          <tr>
+          <tr>
+            <th>Second Emergency Contact Name:</th>
+            <th>{{emergency_contact_2_name}}</th>
+          </tr>
+          <tr>
+            <th>Phone Number:</th>
+            <th>{{emergency_contact_2_phone:}}</th>
+          </tr>
+          <tr>
+            <th>Relation to Camper:</th>
+            <th>{{emergency_contact_2_relationship:}}</th>
+          </tr>
+        </tbody>
+      </table>
 
+      {{#if HealthHistory.dataValues.immunization_utd}}
+      <table class="table">
+        <thead>
+          <tr>
+            <th>HEALTH HISTORY</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Immunization:</th>
+            <th>{{HealthHistory.dataValues.immunization_utd}}</th>
+          </tr>
+          <tr>
+            <th>Asthma:</th>
+            <th>{{HealthHistory.dataValues.ci_asthma}}</th>
+          </tr>
+          <tr>
+            <th>Diabetes:</th>
+            <th>{{HealthHistory.dataValues.ci_diabetes}}</th>
+          </tr>
+          <tr>
+            <th>Ear Infection:</th>
+            <th>{{HealthHistory.dataValues.ci_ear_infection}}</th>
+          </tr>
+          <tr>
+            <th>Heart Problems:</th>
+            <th>{{HealthHistory.dataValues.ci_heart}}</th>
+          </tr>
+          <tr>
+            <th>Hypertension:</th>
+            <th>{{HealthHistory.dataValues.ci_hypertension}}</th>
+          </tr>
+          <tr>
+            <th>Muskuloskeletal Disorder:</th>
+            <th>{{HealthHistory.dataValues.ci_muskuloskeletal_disorder}}</th>
+          </tr>
+          <tr>
+            <th>Seizures:</th>
+            <th>{{HealthHistory.dataValues.ci_seizures}}</th>
+          </tr>
+          <tr>
+            <th>Ill Exposed:</th>
+            <th>{{HealthHistory.dataValues.ill_exposed}}</th>
+          </tr>
+          <tr>
+            <th>Ill Prolonged:</th>
+            <th>{{HealthHistory.dataValues.ill_prolonged}}</th>
+          </tr>
+          <tr>
+            <th>Ill Medication:</th>
+            <th>{{HealthHistory.dataValues.ill_medication}}</th>
+          </tr>
+          <tr>
+            <th>Physical Restriction:</th>
+            <th>{{HealthHistory.dataValues.inj_physical_restriction}}</th>
+          </tr>
+          <tr>
+            <th>Recent Hospitalization:</th>
+            <th>{{HealthHistory.dataValues.inj_recent_hospital_er}}</th>
+          </tr>
+          <tr>
+            <th>Recent Fracture:</th>
+            <th>{{HealthHistory.dataValues.inj_recent_injury_fracture}}</th>
+          </tr>
+          <tr>
+            <th>Recent Surgery:</th>
+            <th>{{HealthHistory.dataValues.inj_recent_surgery}}</th>
+          </tr>
+          <tr>
+            <th>Injury Details:</th>
+            <th>{{HealthHistory.dataValues.in_ill_inj_detail}}</th>
+          </tr>
+          <tr>
+            <th>Animals:</th>
+            <th>{{HealthHistory.dataValues.all_animals}}</th>
+          </tr>
+          <tr>
+            <th>Food:</th>
+            <th>{{HealthHistory.dataValues.all_foods}}</th>
+          </tr>
+          <tr>
+            <th>Hayfever:</th>
+            <th>{{HealthHistory.dataValues.all_hayfever}}</th>
+          </tr>
+          <tr>
+            <th>Insect Sting:</th>
+            <th>{{HealthHistory.dataValues.all_insect_stings}}</th>
+          </tr>
+          <tr>
+            <th>Medication Drugs:</th>
+            <th>{{HealthHistory.dataValues.all_medications_drugs}}</th>
+          </tr>
+          <tr>
+            <th>Plants:</th>
+            <th>{{HealthHistory.dataValues.all_plants}}</th>
+          </tr>
+          <tr>
+            <th>Pollen:</th>
+            <th>{{HealthHistory.dataValues.all_pollen}}</th>
+          </tr>
+          <tr>
+            <th>Details:</th>
+            <th>{{HealthHistory.dataValues.all_detail}}</th>
+          </tr>
+          <tr>
+            <th>Bed Wetting:</th>
+            <th>{{HealthHistory.dataValues.ohc_bedwetting}}</th>
+          </tr>
+          <tr>
+            <th>Constipation:</th>
+            <th>{{HealthHistory.dataValues.ohc_constipation}}</th>
+          </tr>
+          <tr>
+            <th>Emotional Disturbance:</th>
+            <th>{{HealthHistory.dataValues.ohc_emotional_disturbance}}</th>
+          </tr>
+          <tr>
+            <th>Menstrual Cramps:</th>
+            <th>{{HealthHistory.dataValues.ohc_menstrual_cramps}}</th>
+          </tr>
+          <tr>
+            <th>Motion Sickness:</th>
+            <th>{{HealthHistory.dataValues.ohc_motion_sickness}}</th>
+          </tr>
+          <tr>
+            <th>Nose Bleeding:</th>
+            <th>{{HealthHistory.dataValues.ohc_nosebleeds}}</th>
+          </tr>
+          <tr>
+            <th>Sickle cell:</th>
+            <th>{{HealthHistory.dataValues.ohc_sickle_cell}}</th>
+          </tr>
+          <tr>
+            <th>Sleep Disturbances:</th>
+            <th>{{HealthHistory.dataValues.ohc_sleep_disturbances}}</th>
+          </tr>
+          <tr>
+            <th>Special Diet Regime:</th>
+            <th>{{HealthHistory.dataValues.ohc_special_diet_regime}}</th>
+          </tr>
+          <tr>
+            <th>Vision Impairment:</th>
+            <th>{{HealthHistory.dataValues.ohc_vision_impairment}}</th>
+          </tr>
+          <tr>
+            <th>Details:</th>
+            <th>{{HealthHistory.dataValues.ohc_detail}}</th>
+          </tr>
+          <tr>
+            <th>Other Concerns:</th>
+            <th>{{HealthHistory.dataValues.other_concern}}</th>
+          </tr>
+        </tbody>
+      </table>
+      {{/if}}
 
+      {{#if MedicationPermit.dataValues.camp_administered_rx}}
+      <table class="table">
+        <thead>
+          <tr>
+            <th>MEDICATION PERMITS</th>
+          </tr>
+        </thead>
 
-{{!-- {{HealthHistory.dataValues.immunization_utd}} --}}
-<div class="table-container">
-    
-<table class="table">
-  <thead>
-    <tr>
-      <th>CAMPER"S INFO</th>
-    </tr>
-  </thead>
-  {{!-- {{#if(person.isAwake())}} Hello {{/if}} --}}
-  <tbody>
-    <tr>
-      <th>First Name:</th>
-      <th>{{first_name}}</th>
-    </tr>
-    <tr>
-      <th>Last Name:</th>
-      <th>{{last_name}}</th>
-    </tr>
-    <tr>
-      <th>Birthdate:</th>
-      <th>{{birthdate}}</th>
-    </tr>
-    <tr>
-      <th>Grade in School:</th>
-      <th>{{grade_in_school}}</th>
-    </tr>
-    <tr>
-      <th>T-Shirt Size:</th>
-      <th>{{t_shirt_size}}</th>
-    </tr>
-    <tr>
-      <th>Buddy Requests:</th>
-      <th>{{buddy_request}}</th>
-    </tr>
-    <tr>
-      <th>Troop Number:</th>
-      <th>{{troop_number}}</th>
-    </tr>
-    <tr>
-      <th>Service Unit Number:</th>
-      <th>{{service_unit_number}}</th>
-    </tr>
-    <tr>
-      <th>Authorized Release Names:</th>
-      <th>{{authorized_release_names}}</th>
-    </tr>
-    <tr>
-      <th>Guardian First Name:</th>
-      <th>{{guardian_first_name}}</th>
-    </tr>
-    <tr>
-      <th>Guardian Last Name:</th>
-      <th>{{guardian_last_name}}</th>
-    </tr>
-    <tr>
-      <th>Address:</th>
-      <th>{{address_street}}</th>
-    </tr>
-    <tr>
-      <th>City:</th>
-      <th>{{address_city}}</th>
-    </tr>
-    <tr>
-      <th>State:</th>
-      <th>{{address_state}}</th>
-    </tr>
-    <tr>
-      <th>Zip Code:</th>
-      <th>{{address_zip}}</th>
-    </tr>
-    <tr>
-      <th>Cell Phone:</th>
-      <th>{{phone_cell}}</th>
-    </tr>
-    <tr>
-      <th>Home Phone:</th>
-      <th>{{phone_home}}</th>
-    </tr>
-    <tr>
-      <th>Work Phone:</th>
-      <th>{{phone_work}}</th>
-    </tr>
-    <tr>
-      <th>Work Phone EXT:</th>
-      <th>{{phone_work_extension}}</th>
-    </tr>
-    <tr>
-      <th>Email Address:</th>
-      <th>{{email}}</th>
-    </tr>
-    <tr>
-      <th>First Emergency Contact Name:</th>
-      <th>{{emergency_contact_1_name}}</th>
-    </tr>
-    <tr>
-      <th>Phone Number:</th>
-      <th>{{emergency_contact_1_phone:}}</th>
-    </tr>
-    <tr>
-      <th>Relation to Camper:</th>
-      <th>{{emergency_contact_1_relationship:}}</th>
-    </tr>
-    <tr>
-      <tr>
-      <th>Second Emergency Contact Name:</th>
-      <th>{{emergency_contact_2_name}}</th>
-    </tr>
-    <tr>
-      <th>Phone Number:</th>
-      <th>{{emergency_contact_2_phone:}}</th>
-    </tr>
-    <tr>
-      <th>Relation to Camper:</th>
-      <th>{{emergency_contact_2_relationship:}}</th>
-    </tr>
-  </tbody>
-</table>
+        <tbody>
 
-{{#if HealthHistory.dataValues.immunization_utd}}
-<table class="table">
-  <thead>
-    <tr>
-      <th>HEALTH HISTORY</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Immunization:</th>
-      <th>{{HealthHistory.dataValues.immunization_utd}}</th>
-    </tr>
-    <tr>
-      <th>Asthma:</th>
-      <th>{{HealthHistory.dataValues.ci_asthma}}</th>
-    </tr>
-    <tr>
-      <th>Diabetes:</th>
-      <th>{{HealthHistory.dataValues.ci_diabetes}}</th>
-    </tr>
-    <tr>
-      <th>Ear Infection:</th>
-      <th>{{HealthHistory.dataValues.ci_ear_infection}}</th>
-    </tr>
-    <tr>
-      <th>Heart Problems:</th>
-      <th>{{HealthHistory.dataValues.ci_heart}}</th>
-    </tr>
-    <tr>
-      <th>Hypertension:</th>
-      <th>{{HealthHistory.dataValues.ci_hypertension}}</th>
-    </tr>
-    <tr>
-      <th>Muskuloskeletal Disorder:</th>
-      <th>{{HealthHistory.dataValues.ci_muskuloskeletal_disorder}}</th>
-    </tr>
-    <tr>
-      <th>Seizures:</th>
-      <th>{{HealthHistory.dataValues.ci_seizures}}</th>
-    </tr>
-    <tr>
-      <th>Ill Exposed:</th>
-      <th>{{HealthHistory.dataValues.ill_exposed}}</th>
-    </tr>
-    <tr>
-      <th>Ill Prolonged:</th>
-      <th>{{HealthHistory.dataValues.ill_prolonged}}</th>
-    </tr>
-    <tr>
-      <th>Ill Medication:</th>
-      <th>{{HealthHistory.dataValues.ill_medication}}</th>
-    </tr>
-    <tr>
-      <th>Physical Restriction:</th>
-      <th>{{HealthHistory.dataValues.inj_physical_restriction}}</th>
-    </tr>
-    <tr>
-      <th>Recent Hospitalization:</th>
-      <th>{{HealthHistory.dataValues.inj_recent_hospital_er}}</th>
-    </tr>
-    <tr>
-      <th>Recent Fracture:</th>
-      <th>{{HealthHistory.dataValues.inj_recent_injury_fracture}}</th>
-    </tr>
-    <tr>
-      <th>Recent Surgery:</th>
-      <th>{{HealthHistory.dataValues.inj_recent_surgery}}</th>
-    </tr>
-    <tr>
-      <th>Injury Details:</th>
-      <th>{{HealthHistory.dataValues.in_ill_inj_detail}}</th>
-    </tr>
-    <tr>
-      <th>Animals:</th>
-      <th>{{HealthHistory.dataValues.all_animals}}</th>
-    </tr>
-    <tr>
-      <th>Food:</th>
-      <th>{{HealthHistory.dataValues.all_foods}}</th>
-    </tr>
-    <tr>
-      <th>Hayfever:</th>
-      <th>{{HealthHistory.dataValues.all_hayfever}}</th>
-    </tr>
-    <tr>
-      <th>Insect Sting:</th>
-      <th>{{HealthHistory.dataValues.all_insect_stings}}</th>
-    </tr>
-    <tr>
-      <th>Medication Drugs:</th>
-      <th>{{HealthHistory.dataValues.all_medications_drugs}}</th>
-    </tr>
-    <tr>
-      <th>Plants:</th>
-      <th>{{HealthHistory.dataValues.all_plants}}</th>
-    </tr>
-    <tr>
-      <th>Pollen:</th>
-      <th>{{HealthHistory.dataValues.all_pollen}}</th>
-    </tr>
-    <tr>
-      <th>Details:</th>
-      <th>{{HealthHistory.dataValues.all_detail}}</th>
-    </tr>
-    <tr>
-      <th>Bed Wetting:</th>
-      <th>{{HealthHistory.dataValues.ohc_bedwetting}}</th>
-    </tr>
-    <tr>
-      <th>Constipation:</th>
-      <th>{{HealthHistory.dataValues.ohc_constipation}}</th>
-    </tr>
-    <tr>
-      <th>Emotional Disturbance:</th>
-      <th>{{HealthHistory.dataValues.ohc_emotional_disturbance}}</th>
-    </tr>
-    <tr>
-      <th>Menstrual Cramps:</th>
-      <th>{{HealthHistory.dataValues.ohc_menstrual_cramps}}</th>
-    </tr>
-    <tr>
-      <th>Motion Sickness:</th>
-      <th>{{HealthHistory.dataValues.ohc_motion_sickness}}</th>
-    </tr>
-    <tr>
-      <th>Nose Bleeding:</th>
-      <th>{{HealthHistory.dataValues.ohc_nosebleeds}}</th>
-    </tr>
-    <tr>
-      <th>Sickle cell:</th>
-      <th>{{HealthHistory.dataValues.ohc_sickle_cell}}</th>
-    </tr>
-    <tr>
-      <th>Sleep Disturbances:</th>
-      <th>{{HealthHistory.dataValues.ohc_sleep_disturbances}}</th>
-    </tr>
-    <tr>
-      <th>Special Diet Regime:</th>
-      <th>{{HealthHistory.dataValues.ohc_special_diet_regime}}</th>
-    </tr>
-    <tr>
-      <th>Vision Impairment:</th>
-      <th>{{HealthHistory.dataValues.ohc_vision_impairment}}</th>
-    </tr>
-    <tr>
-      <th>Details:</th>
-      <th>{{HealthHistory.dataValues.ohc_detail}}</th>
-    </tr>
-    <tr>
-      <th>Other Concerns:</th>
-      <th>{{HealthHistory.dataValues.other_concern}}</th>
-    </tr>
-    </tbody>
-    </table>
-{{/if}}
+          <tr>
+            <th>Camp Administered RX:</th>
+            <th>{{MedicationPermit.dataValues.camp_administered_rx}}</th>
+          </tr>
+          <tr>
+            <th>Aspirin:</th>
+            <th>{{MedicationPermit.dataValues.aspirin}}</th>
+          </tr>
+          <tr>
+            <th>Benadryl:</th>
+            <th>{{MedicationPermit.dataValues.benadryl}}</th>
+          </tr>
+          <tr>
+            <th>Dramamine:</th>
+            <th>{{MedicationPermit.dataValues.dramamine}}</th>
+          </tr>
+          <tr>
+            <th>Ibuprofen:</th>
+            <th>{{MedicationPermit.dataValues.ibuprofen}}</th>
+          </tr>
+          <tr>
+            <th>Imodium:</th>
+            <th>{{MedicationPermit.dataValues.imodium}}</th>
+          </tr>
+          <tr>
+            <th>Pepto Bismol:</th>
+            <th>{{MedicationPermit.dataValues.pepto_bismol}}</th>
+          </tr>
+          <tr>
+            <th>Robitussin:</th>
+            <th>{{MedicationPermit.dataValues.robitussin}}</th>
+          </tr>
+          <tr>
+            <th>Sudafed:</th>
+            <th>{{MedicationPermit.dataValues.sudafed}}</th>
+          </tr>
+          <tr>
+            <th>Tums:</th>
+            <th>{{MedicationPermit.dataValues.tums}}</th>
+          </tr>
+          <tr>
+            <th>Tylenol:</th>
+            <th>{{MedicationPermit.dataValues.tylenol}}</th>
+          </tr>
+          <tr>
+            <th>Neoaspirin:</th>
+            <th>{{MedicationPermit.dataValues.ont_neosporin}}</th>
+          </tr>
+          <tr>
+            <th>Sunscreen:</th>
+            <th>{{MedicationPermit.dataValues.ont_sunscreen}}</th>
+          </tr>
+          <tr>
+            <th>Other:</th>
+            <th>{{MedicationPermit.dataValues.ont_other}}</th>
+          </tr>
+          <tr>
+            <th>Details:</th>
+            <th>{{MedicationPermit.dataValues.ont_detail}}</th>
+          </tr>
 
-{{#if MedicationPermit.dataValues.camp_administered_rx}}
-<table class="table">
-  <thead>
-    <tr>
-      <th>MEDICATION PERMITS</th>
-    </tr>
-  </thead>
+        </tbody>
+      </table>
+      {{/if}}
 
-  <tbody>
+      {{#if VolunteerInfo.dataValues.camp_name}}
+      <table class="table">
+        <thead>
+          <tr>
+            <th>VOLUNTEER INFO</th>
+          </tr>
+        </thead>
 
-    <tr>
-      <th>Camp Administered RX:</th>
-      <th>{{MedicationPermit.dataValues.camp_administered_rx}}</th>
-    </tr>
-    <tr>
-      <th>Aspirin:</th>
-      <th>{{MedicationPermit.dataValues.aspirin}}</th>
-    </tr>
-    <tr>
-      <th>Benadryl:</th>
-      <th>{{MedicationPermit.dataValues.benadryl}}</th>
-    </tr>
-    <tr>
-      <th>Dramamine:</th>
-      <th>{{MedicationPermit.dataValues.dramamine}}</th>
-    </tr>
-    <tr>
-      <th>Ibuprofen:</th>
-      <th>{{MedicationPermit.dataValues.ibuprofen}}</th>
-    </tr>
-    <tr>
-      <th>Imodium:</th>
-      <th>{{MedicationPermit.dataValues.imodium}}</th>
-    </tr>
-    <tr>
-      <th>Pepto Bismol:</th>
-      <th>{{MedicationPermit.dataValues.pepto_bismol}}</th>
-    </tr>
-    <tr>
-      <th>Robitussin:</th>
-      <th>{{MedicationPermit.dataValues.robitussin}}</th>
-    </tr>
-    <tr>
-      <th>Sudafed:</th>
-      <th>{{MedicationPermit.dataValues.sudafed}}</th>
-    </tr>
-    <tr>
-      <th>Tums:</th>
-      <th>{{MedicationPermit.dataValues.tums}}</th>
-    </tr>
-    <tr>
-      <th>Tylenol:</th>
-      <th>{{MedicationPermit.dataValues.tylenol}}</th>
-    </tr>
-    <tr>
-      <th>Neoaspirin:</th>
-      <th>{{MedicationPermit.dataValues.ont_neosporin}}</th>
-    </tr>
-    <tr>
-      <th>Sunscreen:</th>
-      <th>{{MedicationPermit.dataValues.ont_sunscreen}}</th>
-    </tr>
-    <tr>
-      <th>Other:</th>
-      <th>{{MedicationPermit.dataValues.ont_other}}</th>
-    </tr>
-    <tr>
-      <th>Details:</th>
-      <th>{{MedicationPermit.dataValues.ont_detail}}</th>
-    </tr>
+        <tbody>
 
-    </tbody>
-</table>
-{{/if}}
+          <tr>
+            <th>Camp Name:</th>
+            <th>{{VolunteerInfo.dataValues.camp_name}}</th>
+          </tr>
+          <tr>
+            <th>Sweatshirt Size:</th>
+            <th>{{VolunteerInfo.dataValues.sweatshirt_size}}</th>
+          </tr>
+          <tr>
+            <th>Sweatshirt Style:</th>
+            <th>{{VolunteerInfo.dataValues.sweatshirt_style}}</th>
+          </tr>
+          <tr>
+            <th>Camp Unit:</th>
+            <th>{{VolunteerInfo.dataValues.camp_unit}}</th>
+          </tr>
+          <tr>
+            <th>Background Check Complete:</th>
+            <th>{{VolunteerInfo.dataValues.background_check_complete}}</th>
+          </tr>
 
-{{#if VolunteerInfo.dataValues.camp_name}}
-<table class="table">
-  <thead>
-    <tr>
-      <th>VOLUNTEER INFO</th>
-    </tr>
-  </thead>
-
-  <tbody>
-
-    <tr>
-      <th>Camp Name:</th>
-      <th>{{VolunteerInfo.dataValues.camp_name}}</th>
-    </tr>
-    <tr>
-      <th>Sweatshirt Size:</th>
-      <th>{{VolunteerInfo.dataValues.sweatshirt_size}}</th>
-    </tr>
-    <tr>
-      <th>Sweatshirt Style:</th>
-      <th>{{VolunteerInfo.dataValues.sweatshirt_style}}</th>
-    </tr>
-    <tr>
-      <th>Camp Unit:</th>
-      <th>{{VolunteerInfo.dataValues.camp_unit}}</th>
-    </tr>
-    <tr>
-      <th>Background Check Complete:</th>
-      <th>{{VolunteerInfo.dataValues.background_check_complete}}</th>
-    </tr>
-
-</tbody>
-</table>
-{{/if}}
-
-
-</div> 
-{{!-- End of container --}}
-
-
-        
-        
+        </tbody>
+      </table>
+      {{/if}}
+    </div>
+  </div>
+  <div class="column is-1"></div>
+</div>

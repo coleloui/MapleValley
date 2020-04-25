@@ -1,5 +1,5 @@
 <form action="/api.health.history/register/:{{regId}}" method="post">
-{{!-- <form action="/api.health" method="post"> --}}
+    {{!-- <form action="/api.health" method="post"> --}}
 
     <div class="columns">
         <div class="column is-1"></div>
@@ -8,21 +8,6 @@
             <div class="field">
                 <div class="box">
                     <h1 class="title has-text-centered">Health History</h1>
-                    <label class="label has-text-centered">Are all immunizations up to date?</label>
-                    <div class="field-body">
-                        <div class="field is-grouped is-grouped-centered">
-                            <div class="control">
-                                <label class="radio">
-                                    <input type="radio" name="immunization_utd" value="yes">
-                                    Yes
-                                </label>
-                                <label class="radio">
-                                    <input type="radio" name="immunization_utd" value="no">
-                                    No
-                                </label>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="box">
                     <h2 class="title has-text-centered">Chronic Illness, please select yes to those that apply.</h2>
@@ -178,16 +163,16 @@
                     <div class="columns">
                         <div class="container column is-one-quarter">
                             <div class="field">
-                                <label class="label has-text-centered">An illness lasting more than five days?</label>
+                                <label class="label has-text-centered">Are all immunizations up to date?</label>
                                 <div class="field-body">
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="ill_prolonged" value="yes">
+                                                <input type="radio" name="immunization_utd" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="ill_prolonged" value="no">
+                                                <input type="radio" name="immunization_utd" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -299,6 +284,21 @@
                                             </label>
                                             <label class="radio">
                                                 <input type="radio" name="inj_recent_injury_fracture" value="no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="label has-text-centered">An illness lasting more than five days?</label>
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <label class="radio">
+                                                <input type="radio" name="ill_prolonged" value="yes">
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="ill_prolonged" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -663,7 +663,8 @@
                         </div>
                     </div>
                     <label class="label">If you answered yes to any of the above please explain:</label>
-                    <textarea class="textarea" name="ohc_detail" placeholder="Other Health Concerns information"></textarea>
+                    <textarea class="textarea" name="ohc_detail"
+                        placeholder="Other Health Concerns information"></textarea>
                 </div>
             </div>
 
