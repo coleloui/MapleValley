@@ -15,26 +15,29 @@ router.post('/register/:id', (req, res) => {
     const trueString = "1";
     const falseString = "0";
 
-    // values that need concatenation first
-    const birthdate = new Date(`${req.body.birth_month} ${req.body.birth_day}, ${req.body.birth_year}`);
-    // need to figure out how to tell if it is empty and adjust logic (email check of undefined not working as I was hoping)
-    const email = req.body.minorEmail !== undefined ? (req.body.adultEmail + ", " + req.body.minorEmail) : req.body.email;
-    const eContact1Name = req.body.emergency_contact_1_first_name + " " + req.body.emergency_contact_1_last_name;
-    const eContact2Name = req.body.emergency_contact_2_first_name + " " + req.body.emergency_contact_2_last_name;
-    const buddyName = req.body.buddy_first_name + " " + req.body.buddy_last_name;
+    // values that need concatenation first and/or are conditional on incoming data
+    let birthdate;
+    if(req.body.birth_month && req.body.birth_day && req.body.birth_year){
+        birthdate = new Date(`${req.body.birth_month} ${req.body.birth_day}, ${req.body.birth_year}`);
+    }
+
+    const email = req.body.minorEmail ? (req.body.adultEmail + ", " + req.body.minorEmail) : req.body.adultEmail;
+    const eContact1Name = req.body.emergency_contact_1_first_name || req.body.emergency_contact_1_last_name ? req.body.emergency_contact_1_first_name + " " + req.body.emergency_contact_1_last_name : "";
+    const eContact2Name = req.body.emergency_contact_2_first_name || req.body.emergency_contact_2_last_name ? req.body.emergency_contact_2_first_name + " " + req.body.emergency_contact_2_last_name : "";
+    const buddyName = req.body.buddy_first_name || req.body.buddy_last_name ? req.body.buddy_first_name + " " + req.body.buddy_last_name : "";
 
     const registrationObj = {
         first_year: req.body.first_year === "yes" ? trueString : falseString,
         first_name: req.body.first_name,
         last_name: req.body.last_name,
-        birthdate: birthdate,
-        grade_in_school: req.body.grade_in_school,
+        birthdate: birthdate ? birthdate : null,
+        grade_in_school: req.body.grade_in_school ? req.body.grade_in_school : `${healthRole}`,
         t_shirt_size: req.body.t_shirt_size,
         buddy_request: buddyName,
         registered_girl_scout: req.body.registered_girl_scout === "yes" ? trueString : falseString,
         registration_confirmed: falseString,
         troop_number: req.body.troop_number,
-        service_unit_number: req.body.service_unit_number,
+        service_unit_number: req.body.service_unit_number ? req.body.service_unit_number : null,
         // authorized_release_names: req.body.authorized_release_names, // not in questions yet
 
         guardian_first_name: req.body.guardian_first_name,
@@ -68,7 +71,7 @@ router.post('/register/:id', (req, res) => {
                 camp_name: "",
                 sweatshirt_size: req.body.sweatshirt_size,
                 sweatshirt_style: req.body.sweatshirt_style,
-                camp_unit: "",
+                camp_unit: req.body.grade_in_school ? req.body.grade_in_school : `${healthRole}`,
                 background_check_complete: falseString,
                 RegistrationId: newRegistration.id
             }
