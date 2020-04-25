@@ -14,7 +14,11 @@ router.get('/register', (req, res) => {
 router.post('/register/:id', (req, res) => {
     const trueString = "1";
     const falseString = "0";
-
+    
+    // need the passed in role (volunteer, participant, boy, etc in a couple of places)
+    // cannot get rid of the : and still pass the selected role around correctly, so I admit defeat and just strip the : here.
+    const selectedRole = req.params.id.replace(":", "");
+    
     // values that need concatenation first and/or are conditional on incoming data
     let birthdate;
     if(req.body.birth_month && req.body.birth_day && req.body.birth_year){
@@ -31,7 +35,7 @@ router.post('/register/:id', (req, res) => {
         first_name: req.body.first_name,
         last_name: req.body.last_name,
         birthdate: birthdate ? birthdate : null,
-        grade_in_school: req.body.grade_in_school ? req.body.grade_in_school : `${healthRole}`,
+        grade_in_school: req.body.grade_in_school ? req.body.grade_in_school : selectedRole,
         t_shirt_size: req.body.t_shirt_size,
         buddy_request: buddyName,
         registered_girl_scout: req.body.registered_girl_scout === "yes" ? trueString : falseString,
@@ -71,7 +75,7 @@ router.post('/register/:id', (req, res) => {
                 camp_name: "",
                 sweatshirt_size: req.body.sweatshirt_size,
                 sweatshirt_style: req.body.sweatshirt_style,
-                camp_unit: req.body.grade_in_school ? req.body.grade_in_school : `${healthRole}`,
+                camp_unit: req.body.grade_in_school ? req.body.grade_in_school : selectedRole,
                 background_check_complete: falseString,
                 RegistrationId: newRegistration.id
             }
@@ -80,9 +84,7 @@ router.post('/register/:id', (req, res) => {
                 .then(newVolunteerInfo => {
                     console.log(newVolunteerInfo);
 
-                    // cannot get rid of the : and still pass the selected role around correctly, so I admit defeat and just strip the : here.
-                    const healthRole = req.params.id.replace(":", "");
-                    res.redirect(`/health?role=${healthRole}&regId=${newRegistration.id}`)
+                    res.redirect(`/health?role=${selectedRole}&regId=${newRegistration.id}`)
                 });
 
         });
