@@ -55,7 +55,7 @@ app.use("/api.event", eventApiRoutes);
 app.use(userRoutes);
 
 
-app.use(htmlRoutes);
+app.use(htmlRoutes); 
 
 
 // Syncing our sequelize models and then starting our Express app

@@ -10,15 +10,13 @@ router.get('/', (req, res) => {
     })
 });
 
+// ==================================================
+// saves health history page elements to the database
+// incoming id is the new registration entry to attach the health history to
+// ==================================================
 router.post('/register/:id', (req, res) => {
     const trueString = "1";
     const falseString = "0";
-
-    console.log("========================================")
-    console.log(req.body);
-    console.log("========================================")
-    console.log(req.params.id);
-    console.log("========================================")
 
     const healthHistoryObj = {
         immunization_utd: req.body.immunization_utd === "yes" ? trueString : falseString,
@@ -59,7 +57,7 @@ router.post('/register/:id', (req, res) => {
         ohc_special_diet_regime: req.body.ohc_special_diet_regime === "yes" ? trueString : falseString,
         ohc_vision_impairment: req.body.ohc_vision_impairment === "yes" ? trueString : falseString,
         ohc_detail: req.body.ohc_detail,
-        //other_concern: req.body.other_concern, // No question...is this really needed?
+        //other_concern: req.body.other_concern, // No question exists...is this field really needed?
 
         camp_administered_rx: req.body.camp_administered_rx,
         aspirin: req.body.aspirin === "yes" ? trueString : falseString,
@@ -82,12 +80,8 @@ router.post('/register/:id', (req, res) => {
     db.HealthHistory.create(healthHistoryObj)
         .then(newHealthHistory => {
             console.log(newHealthHistory);
-
             res.redirect("/profile");
-            // res.status(200).json(newHealthHistory);
         })
-
-
 });
 
 router.route("/:id").get((req, res) => {
@@ -98,6 +92,10 @@ router.route("/:id").get((req, res) => {
     }).then(dbHealthHistory => {
         res.json(dbHealthHistory)
     })
+    // ==================================================
+    // .put/edit will not work as written below
+    // this was just a copy/paste of all the fields to get things started
+    // ==================================================
 }).put((req, res) => {
     db.HealthHistory.update({
         immunization_utd: req.body.immunization_utd,
