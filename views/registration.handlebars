@@ -1,5 +1,4 @@
-<form action="/api.registration/register" method="post">
-
+<form action="/api.registration/register/:{{regRole}}" method="post">
 
     <div class="field columns">
         <div class="column is-1"></div>
@@ -224,11 +223,11 @@
                             <div class="field is-narrow">
                                 <div class="control">
                                     <label class="radio">
-                                        <input type="radio" name="first_year_yes">
+                                        <input type="radio" name="first_year" value="yes">
                                         Yes
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="first_year_no">
+                                        <input type="radio" name="first_year" value="no">
                                         No
                                     </label>
                                 </div>

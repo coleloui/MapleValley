@@ -1,4 +1,5 @@
-<form action="/api.health" method="post">
+<form action="/api.health.history/register/:{{regId}}" method="post">
+    {{!-- <form action="/api.health" method="post"> --}}
 
     <div class="columns">
         <div class="column is-1"></div>
@@ -18,11 +19,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ci_asthma" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ci_asthma" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -35,11 +36,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="_yes">
+                                                <input type="radio" name="ci_blood_disorder" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ci_blood_disorder" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -54,11 +55,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ci_diabetes" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ci_diabetes" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -71,11 +72,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ci_ear_infection" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ci_ear_infection" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -90,11 +91,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ci_heart" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ci_heart" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -107,11 +108,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ci_hypertension" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ci_hypertension" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -126,11 +127,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ci_muskuloskeletal_disorder" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ci_muskuloskeletal_disorder" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -143,11 +144,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ci_seizures" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ci_seizures" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -167,11 +168,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="immunization_yes">
+                                                <input type="radio" name="immunization_utd" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="immunization_no">
+                                                <input type="radio" name="immunization_utd" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -185,11 +186,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="inj_physical_restriction" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="inj_physical_restriction" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -204,11 +205,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ill_exposed" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ill_exposed" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -221,11 +222,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="inj_recent_surgery" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="inj_recent_surgery" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -241,11 +242,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ill_medication" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ill_medication" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -258,11 +259,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="inj_recent_hospital_er" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="inj_recent_hospital_er" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -278,11 +279,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="inj_recent_injury_fracture" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="_no">
+                                                <input type="radio" name="inj_recent_injury_fracture" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -294,11 +295,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ill_prolonged" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ill_prolonged" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -308,7 +309,8 @@
                         </div>
                     </div>
                     <label class="label">If you answered yes to any of the above please explain:</label>
-                    <textarea class="textarea" placeholder="Recent Health information"></textarea>
+                    <textarea class="textarea" name="ci_ill_inj_detail"
+                        placeholder="Recent Health information"></textarea>
                 </div>
                 <div class="box">
                     <h2 class="title has-text-centered">Allergies, please select yes to those that apply.</h2>
@@ -320,11 +322,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="all_animals" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="all_animals" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -337,11 +339,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="all_foods" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="all_foods" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -356,11 +358,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="all_hayfever" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="all_hayfever" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -373,11 +375,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="all_insect_stings" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="all_insect_stings" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -392,11 +394,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="all_medications_drugs" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="all_medications_drugs" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -409,11 +411,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="all_plants" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="all_plants" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -428,11 +430,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="all_pollen" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="all_pollen" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -442,7 +444,7 @@
                         </div>
                     </div>
                     <label class="label">If you answered yes to any of the above please explain:</label>
-                    <textarea class="textarea" placeholder="Allergies information"></textarea>
+                    <textarea class="textarea" name="all_detail" placeholder="Allergies information"></textarea>
                 </div>
                 <div class="box">
                     <h2 class="title has-text-centered">Other Health Concerns, please select yes to those that apply.
@@ -455,11 +457,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ohc_bedwetting" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ohc_bedwetting" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -472,11 +474,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ohc_constipation" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ohc_constipation" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -489,11 +491,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ohc_emotional_disturbance" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ohc_emotional_disturbance" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -508,11 +510,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="registered_girl_scout_yes">
+                                                <input type="radio" name="ohc_fainting" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="registered_girl_scout_no">
+                                                <input type="radio" name="ohc_fainting" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -525,11 +527,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ohc_hearing_impairment" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ohc_hearing_impairment" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -542,11 +544,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ohc_menstrual_cramps" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ohc_menstrual_cramps" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -561,11 +563,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ohc_motion_sickness" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ohc_motion_sickness" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -578,11 +580,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ohc_nosebleeds" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ohc_nosebleeds" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -595,11 +597,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ohc_sickle_cell" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ohc_sickle_cell" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -614,11 +616,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ohc_sleep_disturbances" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ohc_sleep_disturbances" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -631,11 +633,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ohc_special_diet_regime" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ohc_special_diet_regime" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -648,11 +650,11 @@
                                     <div class="field is-grouped is-grouped-centered">
                                         <div class="control">
                                             <label class="radio">
-                                                <input type="radio" name="yes">
+                                                <input type="radio" name="ohc_vision_impairment" value="yes">
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="no">
+                                                <input type="radio" name="ohc_vision_impairment" value="no">
                                                 No
                                             </label>
                                         </div>
@@ -662,7 +664,8 @@
                         </div>
                     </div>
                     <label class="label">If you answered yes to any of the above please explain:</label>
-                    <textarea class="textarea" placeholder="Other Health Concerns information"></textarea>
+                    <textarea class="textarea" name="ohc_detail"
+                        placeholder="Other Health Concerns information"></textarea>
                 </div>
             </div>
 
