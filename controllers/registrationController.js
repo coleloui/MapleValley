@@ -49,7 +49,7 @@ router.post('/register/:id', (req, res) => {
         address_street: req.body.address_street,
         address_city: req.body.address_city,
         address_state: req.body.address_state,
-        address_zip: req.body.address_zip,
+        address_zip: req.body.address_zip ? req.body.address_zip : null,
         phone_cell: req.body.phone_cell,
         phone_home: req.body.phone_guardian, // on reg.hbs as phone_guardian. DB name should change
         // phone_work: req.body.phone_work, // not in questions yet, is it really necessary?
@@ -70,22 +70,27 @@ router.post('/register/:id', (req, res) => {
         .then(newRegistration => {
             console.log(newRegistration);
 
-            // sweatshirt size and style need to go to volunteer table
-            const volunteerObj = {
-                camp_name: "",
-                sweatshirt_size: req.body.sweatshirt_size,
-                sweatshirt_style: req.body.sweatshirt_style,
-                camp_unit: req.body.grade_in_school ? req.body.grade_in_school : selectedRole,
-                background_check_complete: falseString,
-                RegistrationId: newRegistration.id
-            }
-
-            db.VolunteerInfo.create(volunteerObj)
+            if(selectedRole === "volunteer" || selectedRole === "childVolunteer"){
+                // sweatshirt size and style need to go to volunteer table
+                const volunteerObj = {
+                    camp_name: "",
+                    sweatshirt_size: req.body.sweatshirt_size,
+                    sweatshirt_style: req.body.sweatshirt_style,
+                    camp_unit: req.body.grade_in_school ? req.body.grade_in_school : selectedRole,
+                    background_check_complete: falseString,
+                    RegistrationId: newRegistration.id
+                }
+                
+                db.VolunteerInfo.create(volunteerObj)
                 .then(newVolunteerInfo => {
                     console.log(newVolunteerInfo);
-
+                    
                     res.redirect(`/health?role=${selectedRole}&regId=${newRegistration.id}`)
                 });
+            } else {
+                // just go directly to the health history page
+                res.redirect(`/health?role=${selectedRole}&regId=${newRegistration.id}`)
+            }
 
         });
 });
