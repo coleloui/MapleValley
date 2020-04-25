@@ -1,31 +1,39 @@
 
-<table class="table is-bordered">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Buddy Requests</th>
-      <th>Food Allergy</th>
-    </tr>
-  </thead>
-  <tfoot>
-    <tr>
-      <th>Name</th>
-      <th>Buddy Requests</th>
-      <th>Food Allergy</th>
-    </tr>
-  </tfoot>
-  <tbody>
-    
+</br>
+<div class="columns">
+  <div class="column is-1"></div>
+  <div class="column">
+    <div class="box">
+      <table class="table is-bordered is-centered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Buddy Requests</th>
+            <th>Food Allergy</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Name</th>
+            <th>Buddy Requests</th>
+            <th>Food Allergy</th>
+          </tr>
+        </tfoot>
+        <tbody>
 
-    {{#each data}}
-    <tr>
-        <td><a href="/camper/{{dataValues.id}}">{{dataValues.first_name}} {{dataValues.last_name}}</a> 
-        <th>{{dataValues.buddy_request}}</th>
-        <th>Food Allergy</th>
-    </tr>
-    {{/each}}
+          {{#each data}}
+          <tr>
+            <td><a href="/camper/{{dataValues.id}}">{{dataValues.first_name}} {{dataValues.last_name}}</a>
+            <th>{{dataValues.buddy_request}}</th>
+            <th>Food Allergy</th>
+          </tr>
+          {{/each}}
 
 
-    
-  </tbody>
-</table>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="column is-1"></div>
+</div>
