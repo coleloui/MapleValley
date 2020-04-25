@@ -1,55 +1,33 @@
+</br>
 
-
-
-<div class='columns' >
-<div class="container column is-three-quarters is-center">
-
-        <div class="card">
-
-           <h1 class="title">Your registrations for Current Events:</h1>
-            <a href="/role" class="button is-success" type="submit">Register more people for SummerCamp!</a>
-            <br>
-
-            
-       
-{{#each data}}
-
-<div class="card">
-  <div class="card-content">
-    <div class="media">
-      <div class="media-left">
-        <figure class="image is-48x48">
-          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-        </figure>
+<div class="columns">
+  <div class="column is-one"></div>
+  <div class="column is-10">
+    <div class="box">
+      <h1 class="title">Your registrations for Current Events:</h1>
+      <a href="/role" class="button" type="submit">Register more people for SummerCamp!</a>
+      </br>
+      {{#each data}}
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title">{{dataValues.first_name}} {{dataValues.last_name}}</p>
+              <p class="subtitle">{{dataValues.email}}</p>
+            </div>
+          </div>
+          <div class="content">
+            <p class="subtitle">Unit Number: {{dataValues.service_unit_number}}</p>
+            <p class="subtitle">Troop Number: {{dataValues.troop_number}}</p>
+            <p class="subtitle">Authorized Names: {{dataValues.authorized_release_names}}</p>
+            <time>Registration Date: {{dataValues.createdAt}}</time>
+            </br>
+            <button class="button">Review your Info</button>
+          </div>
+        </div>
       </div>
-      <div class="media-content">
-        <p class="title is-4">{{dataValues.first_name}} {{dataValues.last_name}}</p>
-        <p class="subtitle is-6">{{dataValues.email}}</p>
-      </div>
-    </div> 
-
-    <div class="content">
-      <p class="subtitle is-6">Unit Number: {{dataValues.service_unit_number}}</p>
-      <p class="subtitle is-6">Troop Number: {{dataValues.troop_number}}</p>
-      <p class="subtitle is-6">Authorized Names: {{dataValues.authorized_release_names}}</p>
-      <time >Registration Date: {{dataValues.createdAt}}</time>
-      <br>
-      <div class="buttons">
-      <button class="button is-info">Review your Info</button>
-      </div>
+      {{/each}}
     </div>
   </div>
+  <div class="column is-one"></div>
 </div>
-{{/each}}
-
- </div>
-    </div>
-    </div>
-
-
-
-
-
-
-
-
