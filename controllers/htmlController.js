@@ -77,21 +77,33 @@ router.get("/registration", (req, res) => {
 });
 
 router.get("/managerprofile", (req, res) => {
-  res.render("managerProfile");
+  if (req.session.user) {
+    var userData = {
+      user: req.session.user,
+    };
+    res.render("managerProfile", userData);
+  } else {
+    res.redirect("/");
+  }
 });
 
 router.get("/grade/:id", (req, res) => {
-  db.Registration.findAll({
-    where: {
-      grade_in_school: req.params.id,
-    },
-  }).then((results) => {
-    const resultsAsJson = results.map((result) => result.toJSON());
-    const register = { data: resultsAsJson };
-    // console.log(resultsAsJson);
-
-    res.render("managerGrade", register);
-  });
+  if (req.session.user.id) {
+    var userData = {
+      user: req.session.user.id,
+    };
+    db.Registration.findAll({
+      where: {
+        grade_in_school: req.params.id,
+      },
+    }).then((results) => {
+      const resultsAsJson = results.map((result) => result.toJSON());
+      const register = { data: resultsAsJson };
+      res.render("managerGrade", register);
+    });
+  } else {
+    res.redirect("/");
+  }
 });
 
 router.get("/camper/:id", (req, res) => {
