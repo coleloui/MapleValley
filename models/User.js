@@ -16,7 +16,8 @@ module.exports = function(sequelize, DataTypes) {
         }
         // add properites here
         // ex: name: DataTypes.STRING
-    });
+    },{timestamps:false}
+    );
 
     User.beforeCreate(function(user){
         user.password = bcrypt.hashSync(user.password,bcrypt.genSaltSync(10),null);

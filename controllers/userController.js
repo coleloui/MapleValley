@@ -28,12 +28,13 @@ router.get("/profile", function (req, res) {
             );
         })
     } else {
-        res.redirect("/profile");
+        res.redirect("/");
     }
 })
 
 router.get("/signup", function (req, res) {
-    res.render("signup");
+   
+      res.render("signup");
 })
 
 router.post("/signup", function (req, res) {
@@ -96,8 +97,9 @@ router.get("/readsessions", function (req, res) {
 
 router.get("/logout", function (req, res) {
     req.session.destroy(function (err) {
-        res.json('logged out');
+        res.json('logged out')
     })
+    res.redirect("/");
 })
 
 module.exports = router;
