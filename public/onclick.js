@@ -1,23 +1,26 @@
-
 console.log("helloworld");
 
 var logo = document.getElementById("logo");
-console.log(logo); 
+console.log(logo);
 
-logo.addEventListener("click", function(){ window.open("http://www.maplevalleydaycamp.com/")});
-
-var logout = document.getElementById("logout");
-logout.addEventListener("click", function(){
-    res.redirect("/")
+logo.addEventListener("click", function () {
+  window.open("http://www.maplevalleydaycamp.com/");
 });
 
+var logout = document.getElementById("logout");
 
-var mod = document.getElementById("test")
+if (logout) {
+  logout.addEventListener("click", function () {
+    res.redirect("/");
+  });
+}
 
-if(mod){
-    mod.addEventListener("click", showModal);
+var mod = document.getElementById("test");
+
+if (mod) {
+  mod.addEventListener("click", showModal);
 }
 function showModal() {
-    var modEl = document.getElementById("modEl");
-    modEl.classList.add("is-active");
+  var modEl = document.getElementById("modEl");
+  modEl.classList.add("is-active");
 }

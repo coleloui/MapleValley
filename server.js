@@ -1,4 +1,3 @@
-
 var express = require("express");
 
 // Sets up the Express App
@@ -10,23 +9,25 @@ require("dotenv").config();
 // Requiring our models for syncing
 var db = require("./models");
 const session = require("express-session");
-var SequelizeStore = require('connect-session-sequelize')(session.Store);
+var SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(session({
-  secret: process.env.SESSION_SECRET,
-  store: new SequelizeStore({
-      db: db.sequelize
-  }),
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-      maxAge: 7200000
-  }
-}))
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    store: new SequelizeStore({
+      db: db.sequelize,
+    }),
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 7200000,
+    },
+  })
+);
 
 // Static directory
 app.use(express.static("public"));
@@ -45,7 +46,6 @@ const eventApiRoutes = require("./controllers/eventController");
 const userRoutes = require("./controllers/userController");
 const htmlRoutes = require("./controllers/htmlController");
 
-
 app.use("/api.registration", registrationApiRoutes);
 // app.use("/api.family.info", familyInfoApiRoutes);
 app.use("/api.health.history", healthHistoryApiRoutes);
@@ -54,16 +54,17 @@ app.use("/api.volunteer.info", volunteerInfoApiRoutes);
 app.use("/api.event", eventApiRoutes);
 app.use(userRoutes);
 
-
-app.use(htmlRoutes); 
-
+app.use(htmlRoutes);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({ force: false }).then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+db.sequelize
+  .sync({ force: false })
+  .then(function () {
+    app.listen(PORT, function () {
+      console.log("App listening on PORT " + PORT);
+    });
+  })
+  .catch((err) => {
+    throw err;
   });
-}).catch(err => { 
-  throw err;
-});
