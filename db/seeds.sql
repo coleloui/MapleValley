@@ -1,3 +1,5 @@
+USE summerCamp_db;
+
 INSERT INTO events 
 (name,venue_name,venue_address,venue_city,start_date,end_date,contact_name,contact_email,createdAt,updatedAt) 
 VALUES 

@@ -18,10 +18,10 @@ router.get("/profile", function (req, res) {
              //where the id is the session id
             // include the registration table
         }).then((results) => {
-            
+            const resultsAsJson = results.map(result=> result.toJSON())
 
-            const register = {data: results, user: req.session.user};
-            console.log(register);
+            const register = {data: resultsAsJson};
+            console.log(resultsAsJson);
             // depending on what  it looks like, either just send it back or put it in an object for handlebars
             // replace data with the results or the handlebars object
             res.render("profile", register

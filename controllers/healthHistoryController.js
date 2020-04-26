@@ -114,7 +114,7 @@ router.route("/:id").get((req, res) => {
         inj_recent_hospital_er: req.body.inj_recent_hospital_er,
         inj_recent_injury_fracture: req.body.inj_recent_injury_fracture,
         inj_recent_surgery: req.body.inj_recent_surgery,
-        ci_ill_inj_detail: req.body.in_ill_inj_detail,
+        ci_ill_inj_detail: req.body.ci_ill_inj_detail,
         all_animals: req.body.all_animals,
         all_foods: req.body.all_foods,
         all_hayfever: req.body.all_hayfever,
