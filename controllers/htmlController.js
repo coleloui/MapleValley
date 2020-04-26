@@ -76,9 +76,10 @@ router.get("/grade/:id", (req, res) => {
             grade_in_school: req.params.id
         }
     }).then(results => {
-        const register = { data: results };
-        console.log(register);
-        console.log(results);
+        const resultsAsJson = results.map(result=> result.toJSON())
+        const register = { data: resultsAsJson };
+        console.log(resultsAsJson);
+        
         res.render("managerGrade", register);
     });
 });
@@ -93,11 +94,10 @@ router.get("/camper/:id", (req, res) => {
     })
 
     .then(results=>{
-        const resultsJson = results.toJSON()
-        // const register = {data: results};
-        // console.log(register);
+        const resultsJson = results.map(result=> result.toJSON())
+        const register = {data: resultsAsJson};        // console.log(register);
         console.log(resultsJson);
-    res.render("managerCamper",resultsJson);
+    res.render("managerCamper",register);
     
 });
     
