@@ -2,25 +2,25 @@
   <div class="navbar-brand">
     {{!-- <a class="navbar-item" href="http://www.maplevalleydaycamp.com"> --}}
 
-      <img id="logo"  src="/images/girlscouts.jpg" >
-    {{!-- </a> --}} 
-     
+    <img id="logo" src="/images/girlscouts.jpg">
+    {{!-- </a> --}}
 
-    
+
+
   </div>
-{{#if user}}
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-light">
-            Logout
-          </a>
-        </div>
+  {{#if user}}
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <div class="buttons">
+        <a href="/" id="logout" class="button is-light">
+          Logout
+        </a>
       </div>
     </div>
-{{/if}}
-  </nav>
-  {{!-- <div> 
+  </div>
+  {{/if}}
+</nav>
+{{!-- <div> 
       <img src="/images/Trees.jpg" class="Trees"></img>
 
   </div> --}}
