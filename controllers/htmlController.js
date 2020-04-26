@@ -91,12 +91,16 @@ router.get("/camper/:id", (req, res) => {
         include: [db.HealthHistory, db.VolunteerInfo]
 
     })
-        .then(results => {
-            // const register = {data: results};
-            // console.log(register);
-            res.render("managerCamper", results);
 
-        });
+    .then(results=>{
+        const resultsJson = results.toJSON()
+        // const register = {data: results};
+        // console.log(register);
+        console.log(resultsJson);
+    res.render("managerCamper",resultsJson);
+    
+});
+    
 
 });
 
