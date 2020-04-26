@@ -79,8 +79,8 @@ router.get("/grade/:id", (req, res) => {
         const register = { data: results };
         console.log(register);
         console.log(results);
-    res.render("managerGrade", register);
-});
+        res.render("managerGrade", register);
+    });
 });
 
 router.get("/camper/:id", (req, res) => {
@@ -91,14 +91,13 @@ router.get("/camper/:id", (req, res) => {
         include: [db.HealthHistory, db.VolunteerInfo]
 
     })
-    .then(results=>{
-        // const register = {data: results};
-        // console.log(register);
-        console.log(results);
-    res.render("managerCamper",results);
-    
-});
-    
+        .then(results => {
+            // const register = {data: results};
+            // console.log(register);
+            res.render("managerCamper", results);
+
+        });
+
 });
 
 
