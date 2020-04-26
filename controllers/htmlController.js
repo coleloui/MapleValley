@@ -92,10 +92,11 @@ router.get("/camper/:id", (req, res) => {
 
     })
     .then(results=>{
+        const resultsJson = results.toJSON()
         // const register = {data: results};
         // console.log(register);
-        console.log(results);
-    res.render("managerCamper",results);
+        console.log(resultsJson);
+    res.render("managerCamper",resultsJson);
     
 });
     
