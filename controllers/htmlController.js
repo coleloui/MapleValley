@@ -89,9 +89,7 @@ router.get("/managerprofile", (req, res) => {
 
 router.get("/grade/:id", (req, res) => {
   if (req.session.user.id) {
-    var userData = {
-      user: req.session.user.id,
-    };
+     
     db.Registration.findAll({
       where: {
         grade_in_school: req.params.id,
