@@ -9,11 +9,11 @@
                     <div class="field is-narrow">
                         <div class="control">
                             <label class="radio">
-                                <input type="radio" name="registered_girl_scout_yes">
+                                <input type="radio" name="registered_girl_scout" value="yes">
                                 Yes
                             </label>
                             <label class="radio">
-                                <input type="radio" name="registered_girl_scout_no">
+                                <input type="radio" name="registered_girl_scout" value="no">
                                 No
                             </label>
                         </div>
@@ -27,7 +27,7 @@
             <label class="label">Troop Number</label>
             <div class="field">
                 <p class="control is-expanded">
-                    <input class="input" name="troop_number" type="text" placeholder="Jane">
+                    <input class="input" name="troop_number" type="text" placeholder="49999">
                 </p>
             </div>
         </div>
@@ -35,12 +35,11 @@
             <label class="label">Service Unit</label>
             <div class="field">
                 <p class="control is-expanded">
-                    <input class="input" name="service_unit_number" type="text" placeholder="Doe">
+                    <input class="input" name="service_unit_number" type="text" placeholder="024">
             </div>
         </div>
     </div>
 </div>
-
 <div class="box">
     <div class="field columns">
         <div class="field-body column is-2">
@@ -76,7 +75,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="columns">
                 <div class="field column is-2">
                     <label class="label">Cell Number</label>
@@ -107,11 +105,10 @@
         </div>
     </div>
 </div>
-
 <div class="box">
     <div class="columns">
         <div class="column">
-            <label class="label">Sweat Shirt Size</label>
+            <label class="label">Sweat Shirt</label>
             <div class="select">
                 <select name="sweatshirt_size">
                     <option disabled selected hidden>Sizes</option>
@@ -123,11 +120,6 @@
                     <option>AXXXL</option>
                 </select>
             </div>
-        </div>
-    </div>
-    <div class="columns">
-        <div class="column">
-            <label class="label">Sweat Shirt Style</label>
             <div class="select">
                 <select name="sweatshirt_style">
                     <option disabled selected hidden>Styles</option>
@@ -141,8 +133,6 @@
     </div>
 </div>
 
-<a href="/health?role=volunteer" class="button is-outlined">Next</a>
-
 {{/if}}
 
 {{#if childVolunteer}}
@@ -152,7 +142,7 @@
         <div class="column">
             <label class="label">What grade are you going into in the Fall?</label>
             <div class="select">
-                <select name="Grade">
+                <select name="grade_in_school">
                     <option disabled selected hidden>Grade</option>
                     <option>7</option>
                     <option>8</option>
@@ -172,11 +162,11 @@
                     <div class="field is-narrow">
                         <div class="control">
                             <label class="radio">
-                                <input type="radio" name="registered_girl_scout_yes">
+                                <input type="radio" name="registered_girl_scout" value="yes">
                                 Yes
                             </label>
                             <label class="radio">
-                                <input type="radio" name="registered_girl_scout_no">
+                                <input type="radio" name="registered_girl_scout" value="no">
                                 No
                             </label>
                         </div>
@@ -190,7 +180,7 @@
             <label class="label">Troop Number</label>
             <div class="field">
                 <p class="control is-expanded">
-                    <input class="input" name="troop_number" type="text" placeholder="Jane">
+                    <input class="input" name="troop_number" type="text" placeholder="49999">
                 </p>
             </div>
         </div>
@@ -198,14 +188,12 @@
             <label class="label">Service Unit</label>
             <div class="field">
                 <p class="control is-expanded">
-                    <input class="input" name="service_unit_number" type="text" placeholder="Doe">
+                    <input class="input" name="service_unit_number" type="text" placeholder="024">
             </div>
         </div>
     </div>
 </div>
-
 <div class="box">
-
     <div class="field columns">
         <div class="field-body column is-2">
             <label class="label">Guardian First Name</label>
@@ -258,7 +246,6 @@
         </div>
     </div>
 </div>
-
 <div class="box">
     <div class="columns">
         <div class="column">
@@ -283,7 +270,6 @@
                 </div>
                 <div class="column is-1"></div>
             </div>
-
             <div class="columns">
                 <div class="field column is-2">
                     <label class="label">Cell Number</label>
@@ -314,7 +300,6 @@
         </div>
     </div>
 </div>
-
 <div class="box">
     <div class="columns">
         <div class="column">
@@ -339,7 +324,461 @@
                 </div>
                 <div class="column is-1"></div>
             </div>
+            <div class="columns">
+                <div class="field column is-2">
+                    <label class="label">Cell Number</label>
+                    <div class="field-body">
+                        <div class="field is-expanded">
+                            <div class="field has-addons">
+                                <p class="control is-expanded">
+                                    <input class="input" name="emergency_contact_2_phone" type="tel"
+                                        placeholder="(999) 999-9999">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-7"></div>
+            </div>
+            <label class="label">Relationship</label>
+            <div class="select">
+                <select name="emergency_contact_2_relationship">
+                    <option disabled selected hidden>Relationship</option>
+                    <option>Spouse</option>
+                    <option>Parent</option>
+                    <option>Grandparent</option>
+                    <option>Neighbor</option>
+                    <option>Family Friend</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <div class="columns">
+        <div class="column">
+            <label class="label">Sweat Shirt</label>
+            <div class="select">
+                <select name="sweatshirt_size">
+                    <option disabled selected hidden>Sizes</option>
+                    <option>AS</option>
+                    <option>AM</option>
+                    <option>AL</option>
+                    <option>AXL</option>
+                    <option>AXXL</option>
+                    <option>AXXXL</option>
+                </select>
+            </div>
+            <div class="select">
+                <select name="sweatshirt_style">
+                    <option disabled selected hidden>Styles</option>
+                    <option>Hoodie</option>
+                    <option>Hoodie with Name</option>
+                    <option>Zip-up</option>
+                    <option>Zip-up with Name</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <div class="columns">
+        <div class="column">
+            <div class="field">
+                <label class="label">Are you interested in being a volunteer?</label>
+                <div class="field-body">
+                    <div class="field is-narrow">
+                        <div class="control">
+                            <label class="radio">
+                                <input type="radio" name="contact_for_volunteer" value="yes">
+                                Yes
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="contact_for_volunteer" value="no">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+
+{{/if}}
+
+
+
+{{#if participant}}
+
+<div class="box">
+    <div class="columns">
+        <div class="column">
+            <label class="label">What grade are you going into in the Fall?</label>
+            <div class="select">
+                <select name="grade_in_school">
+                    <option disabled selected hidden>Grade</option>
+                    <option>K</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column">
+            <div class="field">
+                <label class="label">Are you registered as a Girl Scout?</label>
+                <div class="field-body">
+                    <div class="field is-narrow">
+                        <div class="control">
+                            <label class="radio">
+                                <input type="radio" name="registered_girl_scout" value="yes">
+                                Yes
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="registered_girl_scout" value="no">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field columns">
+        <div class="field-body column is-2">
+            <label class="label">Troop Number</label>
+            <div class="field">
+                <p class="control is-expanded">
+                    <input class="input" name="troop_number" type="text" placeholder="49999">
+                </p>
+            </div>
+        </div>
+        <div class="field-body column is-2">
+            <label class="label">Service Unit</label>
+            <div class="field">
+                <p class="control is-expanded">
+                    <input class="input" name="service_unit_number" type="text" placeholder="024">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <div class="field columns">
+        <div class="field-body column is-2">
+            <label class="label">Guardian First Name</label>
+            <div class="field">
+                <p class="control is-expanded">
+                    <input class="input" name="guardian_first_name" type="text" placeholder="Jane">
+                </p>
+            </div>
+        </div>
+        <div class="field-body column is-2">
+            <label class="label">Guardian Last Name</label>
+            <div class="field">
+                <p class="control is-expanded">
+                    <input class="input" name="guardian_last_name" type="text" placeholder="Doe">
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="field column is-2">
+            <label class="label">Guardian Cell Number</label>
+            <div class="field-body">
+                <div class="field is-expanded">
+                    <div class="field has-addons">
+                        <p class="control is-expanded">
+                            <input class="input" name="phone_guardian" type="tel" placeholder="(999) 999-9999">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-2">
+            <div class="field">
+                <label class="label">What is your Email address?</label>
+            </div>
+            <div class="control">
+                <input class="input" name="adultEmail" type="email" placeholder="test@test.com">
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-2">
+            <div class="field">
+                <label class="label">What is your the campers Email address?</label>
+            </div>
+            <div class="control">
+                <input class="input" name="minorEmail" type="email" placeholder="test@test.com">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <div class="columns">
+        <div class="column">
+            <div class="field">
+                <label class="title label">Emergency Contact 1</label>
+            </div>
+            <div class="field columns">
+                <div class="field-body column is-2">
+                    <label class="label">First Name</label>
+                    <div class="field">
+                        <p class="control is-expanded">
+                            <input class="input" name="emergency_contact_1_first_name" type="text" placeholder="Jane">
+                        </p>
+                    </div>
+                </div>
+                <div class="field-body column is-2">
+                    <label class="label">Last Name</label>
+                    <div class="field">
+                        <p class="control is-expanded">
+                            <input class="input" name="emergency_contact_1_last_name" type="text" placeholder="Doe">
+                    </div>
+                </div>
+                <div class="column is-1"></div>
+            </div>
+            <div class="columns">
+                <div class="field column is-2">
+                    <label class="label">Cell Number</label>
+                    <div class="field-body">
+                        <div class="field is-expanded">
+                            <div class="field has-addons">
+                                <p class="control is-expanded">
+                                    <input class="input" name="emergency_contact_1_phone" type="tel"
+                                        placeholder="(999) 999-9999">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-7"></div>
+            </div>
+            <label class="label">Relationship</label>
+            <div class="select">
+                <select name="emergency_contact_1_relationship">
+                    <option disabled selected hidden>Relationship</option>
+                    <option>Spouse</option>
+                    <option>Parent</option>
+                    <option>Grandparent</option>
+                    <option>Neighbor</option>
+                    <option>Family Friend</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <div class="columns">
+        <div class="column">
+            <div class="field">
+                <label class="title label">Emergency Contact 2</label>
+            </div>
+            <div class="field columns">
+                <div class="field-body column is-2">
+                    <label class="label">First Name</label>
+                    <div class="field">
+                        <p class="control is-expanded">
+                            <input class="input" name="emergency_contact_2_first_name" type="text" placeholder="Jane">
+                        </p>
+                    </div>
+                </div>
+                <div class="field-body column is-2">
+                    <label class="label">Last Name</label>
+                    <div class="field">
+                        <p class="control is-expanded">
+                            <input class="input" name="emergency_contact_2_last_name" type="text" placeholder="Doe">
+                    </div>
+                </div>
+                <div class="column is-1"></div>
+            </div>
+            <div class="columns">
+                <div class="field column is-2">
+                    <label class="label">Cell Number</label>
+                    <div class="field-body">
+                        <div class="field is-expanded">
+                            <div class="field has-addons">
+                                <p class="control is-expanded">
+                                    <input class="input" name="emergency_contact_2_phone" type="tel"
+                                        placeholder="(999) 999-9999">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-7"></div>
+            </div>
+            <label class="label">Relationship</label>
+            <div class="select">
+                <select name="emergency_contact_2_relationship">
+                    <option disabled selected hidden>Relationship</option>
+                    <option>Spouse</option>
+                    <option>Parent</option>
+                    <option>Grandparent</option>
+                    <option>Neighbor</option>
+                    <option>Family Friend</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <div class="columns">
+        <div class="column">
+            <div class="field">
+                <label class="label">Are you interested in being a volunteer?</label>
+                <div class="field-body">
+                    <div class="field is-narrow">
+                        <div class="control">
+                            <label class="radio">
+                                <input type="radio" name="contact_for_volunteer" value="yes">
+                                Yes
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="contact_for_volunteer" value="no">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/if}}
+
+{{#if boy}}
+
+<div class="box">
+    <div class="field columns">
+        <div class="field-body column is-2">
+            <label class="label">Guardian First Name</label>
+            <div class="field">
+                <p class="control is-expanded">
+                    <input class="input" name="guardian_first_name" type="text" placeholder="Jane">
+                </p>
+            </div>
+        </div>
+        <div class="field-body column is-2">
+            <label class="label">Guardian Last Name</label>
+            <div class="field">
+                <p class="control is-expanded">
+                    <input class="input" name="guardian_last_name" type="text" placeholder="Doe">
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="field column is-2">
+            <label class="label">Guardian Cell Number</label>
+            <div class="field-body">
+                <div class="field is-expanded">
+                    <div class="field has-addons">
+                        <p class="control is-expanded">
+                            <input class="input" name="phone_guardian" type="tel" placeholder="(999) 999-9999">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-2">
+            <div class="field">
+                <label class="label">What is your Email address?</label>
+            </div>
+            <div class="control">
+                <input class="input" name="adultEmail" type="email" placeholder="test@test.com">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <div class="columns">
+        <div class="column">
+            <div class="field">
+                <label class="title label">Emergency Contact 1</label>
+            </div>
+            <div class="field columns">
+                <div class="field-body column is-2">
+                    <label class="label">First Name</label>
+                    <div class="field">
+                        <p class="control is-expanded">
+                            <input class="input" name="emergency_contact_1_first_name" type="text" placeholder="Jane">
+                        </p>
+                    </div>
+                </div>
+                <div class="field-body column is-2">
+                    <label class="label">Last Name</label>
+                    <div class="field">
+                        <p class="control is-expanded">
+                            <input class="input" name="emergency_contact_1_last_name" type="text" placeholder="Doe">
+                    </div>
+                </div>
+                <div class="column is-1"></div>
+            </div>
+            <div class="columns">
+                <div class="field column is-2">
+                    <label class="label">Cell Number</label>
+                    <div class="field-body">
+                        <div class="field is-expanded">
+                            <div class="field has-addons">
+                                <p class="control is-expanded">
+                                    <input class="input" name="emergency_contact_1_phone" type="tel"
+                                        placeholder="(999) 999-9999">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-7"></div>
+            </div>
+            <label class="label">Relationship</label>
+            <div class="select">
+                <select name="emergency_contact_1_relationship">
+                    <option disabled selected hidden>Relationship</option>
+                    <option>Spouse</option>
+                    <option>Parent</option>
+                    <option>Grandparent</option>
+                    <option>Neighbor</option>
+                    <option>Family Friend</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <div class="columns">
+        <div class="column">
+            <div class="field">
+                <label class="title label">Emergency Contact 2</label>
+            </div>
+            <div class="field columns">
+                <div class="field-body column is-2">
+                    <label class="label">First Name</label>
+                    <div class="field">
+                        <p class="control is-expanded">
+                            <input class="input" name="emergency_contact_2_first_name" type="text" placeholder="Jane">
+                        </p>
+                    </div>
+                </div>
+                <div class="field-body column is-2">
+                    <label class="label">Last Name</label>
+                    <div class="field">
+                        <p class="control is-expanded">
+                            <input class="input" name="emergency_contact_2_last_name" type="text" placeholder="Doe">
+                    </div>
+                </div>
+                <div class="column is-1"></div>
+            </div>
             <div class="columns">
                 <div class="field column is-2">
                     <label class="label">Cell Number</label>
@@ -371,533 +810,12 @@
     </div>
 </div>
 
-<div class="box">
-    <div class="columns">
-        <div class="column">
-            <label class="label">Sweat Shirt Size</label>
-            <div class="select">
-                <select name="sweatshirt_size">
-                    <option disabled selected hidden>Sizes</option>
-                    <option>AS</option>
-                    <option>AM</option>
-                    <option>AL</option>
-                    <option>AXL</option>
-                    <option>AXXL</option>
-                    <option>AXXXL</option>
-                </select>
-            </div>
-        </div>
-    </div>
-    <div class="columns">
-        <div class="column is-1"></div>
-        <div class="column">
-            <label class="label" Sweat Shirt Style</label>
-                <div class="select">
-                    <select name="sweatshirt_style">
-                        <option disabled selected hidden>Styles</option>
-                        <option>Hoodie</option>
-                        <option>Hoodie with Name</option>
-                        <option>Zip-up</option>
-                        <option>Zip-up with Name</option>
-                    </select>
-                </div>
-        </div>
-    </div>
-</div>
-
-<div class="columns">
-    <div class="column">
-        <div class="field">
-            <label class="label">Are you interested in being a volunteer?</label>
-            <div class="field-body">
-                <div class="field is-narrow">
-                    <div class="control">
-                        <label class="radio">
-                            <input type="radio" name="member">
-                            Yes
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="member">
-                            No
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<a href="/health?role=childVolunteer" class="button is-outlined">Next</a>
-
 {{/if}}
-
-
-
-{{#if participant}}
-
-</br>
-<h1>I AM Participant</h1>
-</br>
-
-<div class="columns">
-    <div class="column is-1"></div>
-    <div class="column">
-        <label class="label">What grade are you going into in the Fall?</label>
-        <div class="select">
-            <select name="Grade">
-                <option disabled selected hidden>Grade</option>
-                <option>K</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-            </select>
-        </div>
-    </div>
-</div>
-
-<div class="columns">
-    <div class="column is-1"></div>
-    <div class="column">
-        <div class="field">
-            <label class="label">Are you registered as a Girl Scout?</label>
-            <div class="field-body">
-                <div class="field is-narrow">
-                    <div class="control">
-                        <label class="radio">
-                            <input type="radio" name="registered_girl_scout_yes">
-                            Yes
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="registered_girl_scout_no">
-                            No
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="field columns">
-    <div class="column is-1"></div>
-    <div class="field-body column is-2">
-        <label class="label">Troop Number</label>
-        <div class="field">
-            <p class="control is-expanded">
-                <input class="input" name="troop_number" type="text" placeholder="Jane">
-            </p>
-        </div>
-    </div>
-    <div class="field-body column is-2">
-        <label class="label">Service Unit</label>
-        <div class="field">
-            <p class="control is-expanded">
-                <input class="input" name="service_unit_number" type="text" placeholder="Doe">
-        </div>
-    </div>
-    <div class="column is-1"></div>
-</div>
 
 <div class="field">
-    <div class="columns">
-        <div class="column is-1"></div>
-        <div class="column is-2">
-            <label class="label">Is there a friend you would like to be in a group with?</label>
-        </div>
-    </div>
-    <div class="field columns">
-        <div class="column is-1"></div>
-        <div class="field-body column is-2">
-            <label class="label">First Name</label>
-            <div class="field">
-                <p class="control is-expanded">
-                    <input class="input" name="buddy_first_name" type="text" placeholder="Jane">
-                </p>
-            </div>
-        </div>
-        <div class="field-body column is-2">
-            <label class="label">Last Name</label>
-            <div class="field">
-                <p class="control is-expanded">
-                    <input class="input" name="buddy_last_name" type="text" placeholder="Doe">
-            </div>
-        </div>
-        <div class="column is-1"></div>
-    </div>
+    <p class="control">
+        <button class="button">
+            Next
+        </button>
+    </p>
 </div>
-
-</br>
-
-<div class="field columns">
-    <div class="column is-1"></div>
-    <div class="field-body column is-2">
-        <label class="label">Guardian First Name</label>
-        <div class="field">
-            <p class="control is-expanded">
-                <input class="input" name="guardian_first_name" type="text" placeholder="Jane">
-            </p>
-        </div>
-    </div>
-    <div class="field-body column is-2">
-        <label class="label">Guardian Last Name</label>
-        <div class="field">
-            <p class="control is-expanded">
-                <input class="input" name="guardian_last_name" type="text" placeholder="Doe">
-        </div>
-    </div>
-    <div class="column is-1"></div>
-</div>
-
-<div class="columns">
-    <div class="column is-1"></div>
-    <div class="field column is-2">
-        <label class="label">Guardian Cell Number</label>
-        <div class="field-body">
-            <div class="field is-expanded">
-                <div class="field has-addons">
-                    <p class="control is-expanded">
-                        <input class="input" name="phone_guardian" type="tel" placeholder="(999) 999-9999">
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="columns">
-    <div class="column is-1"></div>
-    <div class="column is-2">
-        <div class="field">
-            <label class="label">What is your Email address?</label>
-        </div>
-        <div class="control">
-            <input class="input" name="adultEmail" type="email" placeholder="test@test.com">
-        </div>
-    </div>
-</div>
-
-<div class="columns">
-    <div class="column is-1"></div>
-    <div class="column is-2">
-        <div class="field">
-            <label class="label">What is your the campers Email address?</label>
-        </div>
-        <div class="control">
-            <input class="input" name="minorEmail" type="email" placeholder="test@test.com">
-        </div>
-    </div>
-</div>
-
-
-<div class="columns">
-    <div class="column is-1"></div>
-    <div class="column">
-        <div class="field">
-            <label class="title label">Emergency Contact 1</label>
-        </div>
-        <div class="field columns">
-            <div class="field-body column is-2">
-                <label class="label">First Name</label>
-                <div class="field">
-                    <p class="control is-expanded">
-                        <input class="input" name="emergency_contact_1_first_name" type="text" placeholder="Jane">
-                    </p>
-                </div>
-            </div>
-            <div class="field-body column is-2">
-                <label class="label">Last Name</label>
-                <div class="field">
-                    <p class="control is-expanded">
-                        <input class="input" name="emergency_contact_1_last_name" type="text" placeholder="Doe">
-                </div>
-            </div>
-            <div class="column is-1"></div>
-        </div>
-
-        <div class="columns">
-            <div class="field column is-2">
-                <label class="label">Cell Number</label>
-                <div class="field-body">
-                    <div class="field is-expanded">
-                        <div class="field has-addons">
-                            <p class="control is-expanded">
-                                <input class="input" name="emergency_contact_1_phone" type="tel"
-                                    placeholder="(999) 999-9999">
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column is-7"></div>
-        </div>
-        <label class="label">Relationship</label>
-        <div class="select">
-            <select name="emergency_contact_1_relationship">
-                <option disabled selected hidden>Relationship</option>
-                <option>Spouse</option>
-                <option>Parent</option>
-                <option>Grandparent</option>
-                <option>Neighbor</option>
-                <option>Family Friend</option>
-            </select>
-        </div>
-    </div>
-</div>
-
-</br>
-</br>
-
-<div class="columns">
-    <div class="column is-1"></div>
-    <div class="column">
-        <div class="field">
-            <label class="title label">Emergency Contact 2</label>
-        </div>
-        <div class="field columns">
-            <div class="field-body column is-2">
-                <label class="label">First Name</label>
-                <div class="field">
-                    <p class="control is-expanded">
-                        <input class="input" name="emergency_contact_2_first_name" type="text" placeholder="Jane">
-                    </p>
-                </div>
-            </div>
-            <div class="field-body column is-2">
-                <label class="label">Last Name</label>
-                <div class="field">
-                    <p class="control is-expanded">
-                        <input class="input" name="emergency_contact_2_last_name" type="text" placeholder="Doe">
-                </div>
-            </div>
-            <div class="column is-1"></div>
-        </div>
-
-        <div class="columns">
-            <div class="field column is-2">
-                <label class="label">Cell Number</label>
-                <div class="field-body">
-                    <div class="field is-expanded">
-                        <div class="field has-addons">
-                            <p class="control is-expanded">
-                                <input class="input" name="emergency_contact_2_phone" type="tel"
-                                    placeholder="(999) 999-9999">
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column is-7"></div>
-        </div>
-        <label class="label">Relationship</label>
-        <div class="select">
-            <select name="emergency_contact_2_relationship">
-                <option disabled selected hidden>Relationship</option>
-                <option>Spouse</option>
-                <option>Parent</option>
-                <option>Grandparent</option>
-                <option>Neighbor</option>
-                <option>Family Friend</option>
-            </select>
-        </div>
-    </div>
-</div>
-
-<div class="columns">
-    <div class="column is-1"></div>
-    <div class="column">
-        <div class="field">
-            <label class="label">Are you interested in being a volunteer?</label>
-            <div class="field-body">
-                <div class="field is-narrow">
-                    <div class="control">
-                        <label class="radio">
-                            <input type="radio" name="member">
-                            Yes
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="member">
-                            No
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<a href="/health?role=participant" class="button is-outlined">Health Info</a>
-
-{{/if}}
-
-</br>
-{{#if boy}}
-</br>
-
-<h1>I AM BOY HEAR ME ROAR!</h1>
-
-<div class="field columns">
-    <div class="column is-1"></div>
-    <div class="field-body column is-2">
-        <label class="label">Guardian First Name</label>
-        <div class="field">
-            <p class="control is-expanded">
-                <input class="input" name="guardian_first_name" type="text" placeholder="Jane">
-            </p>
-        </div>
-    </div>
-    <div class="field-body column is-2">
-        <label class="label">Guardian Last Name</label>
-        <div class="field">
-            <p class="control is-expanded">
-                <input class="input" name="guardian_last_name" type="text" placeholder="Doe">
-        </div>
-    </div>
-    <div class="column is-1"></div>
-</div>
-
-<div class="columns">
-    <div class="column is-1"></div>
-    <div class="field column is-2">
-        <label class="label">Guardian Cell Number</label>
-        <div class="field-body">
-            <div class="field is-expanded">
-                <div class="field has-addons">
-                    <p class="control is-expanded">
-                        <input class="input" name="phone_guardian" type="tel" placeholder="(999) 999-9999">
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="columns">
-    <div class="column is-1"></div>
-    <div class="column is-2">
-        <div class="field">
-            <label class="label">Guardian Email address?</label>
-        </div>
-        <div class="control">
-            <input class="input" name="adultEmail" type="email" placeholder="test@test.com">
-        </div>
-    </div>
-</div>
-
-<div class="columns">
-    <div class="column is-1"></div>
-    <div class="column">
-        <div class="field">
-            <label class="title label">Emergency Contact 1</label>
-        </div>
-        <div class="field columns">
-            <div class="field-body column is-2">
-                <label class="label">First Name</label>
-                <div class="field">
-                    <p class="control is-expanded">
-                        <input class="input" name="emergency_contact_1_first_name" type="text" placeholder="Jane">
-                    </p>
-                </div>
-            </div>
-            <div class="field-body column is-2">
-                <label class="label">Last Name</label>
-                <div class="field">
-                    <p class="control is-expanded">
-                        <input class="input" name="emergency_contact_1_last_name" type="text" placeholder="Doe">
-                </div>
-            </div>
-            <div class="column is-1"></div>
-        </div>
-
-        <div class="columns">
-            <div class="field column is-2">
-                <label class="label">Cell Number</label>
-                <div class="field-body">
-                    <div class="field is-expanded">
-                        <div class="field has-addons">
-                            <p class="control is-expanded">
-                                <input class="input" name="emergency_contact_1_phone" type="tel"
-                                    placeholder="(999) 999-9999">
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column is-7"></div>
-        </div>
-        <label class="label">Relationship</label>
-        <div class="select">
-            <select name="emergency_contact_1_relationship">
-                <option disabled selected hidden>Relationship</option>
-                <option>Spouse</option>
-                <option>Parent</option>
-                <option>Grandparent</option>
-                <option>Neighbor</option>
-                <option>Family Friend</option>
-            </select>
-        </div>
-    </div>
-</div>
-</div>
-
-<div class="columns">
-    <div class="column is-1"></div>
-    <div class="column">
-        <div class="field">
-            <label class="title label">Emergency Contact 2</label>
-        </div>
-        <div class="field columns">
-            <div class="field-body column is-2">
-                <label class="label">First Name</label>
-                <div class="field">
-                    <p class="control is-expanded">
-                        <input class="input" name="emergency_contact_2_first_name" type="text" placeholder="Jane">
-                    </p>
-                </div>
-            </div>
-            <div class="field-body column is-2">
-                <label class="label">Last Name</label>
-                <div class="field">
-                    <p class="control is-expanded">
-                        <input class="input" name="emergency_contact_2_last_name" type="text" placeholder="Doe">
-                </div>
-            </div>
-            <div class="column is-1"></div>
-        </div>
-
-        <div class="columns">
-            <div class="field column is-2">
-                <label class="label">Cell Number</label>
-                <div class="field-body">
-                    <div class="field is-expanded">
-                        <div class="field has-addons">
-                            <p class="control is-expanded">
-                                <input class="input" name="emergency_contact_2_phone" type="tel"
-                                    placeholder="(999) 999-9999">
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column is-7"></div>
-        </div>
-        <label class="label">Relationship</label>
-        <div class="select">
-            <select name="emergency_contact_2_relationship">
-                <option disabled selected hidden>Relationship</option>
-                <option>Spouse</option>
-                <option>Parent</option>
-                <option>Grandparent</option>
-                <option>Neighbor</option>
-                <option>Family Friend</option>
-            </select>
-        </div>
-    </div>
-</div>
-</div>
-
-<a href="/health?role=boy" class="button is-outlined">Health Info</a>
-
-{{/if}}
