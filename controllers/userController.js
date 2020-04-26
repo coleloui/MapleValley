@@ -33,7 +33,8 @@ router.get("/profile", function (req, res) {
 })
 
 router.get("/signup", function (req, res) {
-    res.render("signup");
+
+      res.render("signup");
 })
 
 router.post("/signup", function (req, res) {
