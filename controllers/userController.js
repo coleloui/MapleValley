@@ -33,7 +33,7 @@ router.get("/profile", function (req, res) {
 })
 
 router.get("/signup", function (req, res) {
-
+   
       res.render("signup");
 })
 
