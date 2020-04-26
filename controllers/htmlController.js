@@ -84,9 +84,6 @@ router.get("/grade/:id", (req, res) => {
 });
 
 router.get("/camper/:id", (req, res) => {
-    console.log("=====================get camper/:id ==============================")
-    console.log("===================================================")
-    console.log(req.params.id);
     db.Registration.findOne({
         where: {
             id: req.params.id
@@ -97,8 +94,6 @@ router.get("/camper/:id", (req, res) => {
         .then(results => {
             // const register = {data: results};
             // console.log(register);
-            console.log("=====================results==============================")
-            console.log(results);
             res.render("managerCamper", results);
 
         });
