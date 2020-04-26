@@ -7,68 +7,89 @@ router.get("/", (req, res) => {
 });
 
 router.get("/role", (req, res) => {
-    res.render("role");
+    if (req.session.user) {
+        var userData = {
+            user: req.session.user
+        }
+        res.render("role", userData);
+    } else {
+        res.redirect("/")
+    }
+
 });
 
 router.get("/health", (req, res) => {
-    const newObj = {};
+    if (req.session.user) {
 
-    // the registration table id that will tie to health history
-    newObj.regId = req.query.regId;
 
-    switch (req.query.role) {
-        case "volunteer":
-            newObj.volunteer = true;
-            break;
+        // the registration table id that will tie to health history
 
-        case "childVolunteer":
-            newObj.childVolunteer = true;
-            break;
-        case "participant":
-            newObj.participant = true;
-            break;
-        case "boy":
-            newObj.boy = true;
-            break;
+        console.log(req.query.role)
+        const newObj = { user: req.session.user };
+        newObj.regId = req.query.regId;
+        switch (req.query.role) {
+            case "volunteer":
+                newObj.volunteer = true;
+                break;
+            case "childVolunteer":
+                newObj.childVolunteer = true;
+                break;
+            case "participant":
+                newObj.participant = true;
+                break;
+            case "boy":
+                newObj.boy = true;
+                break;
 
-        default:
-            break;
+            default:
+                break;
+        }
+        console.log(newObj);
+        res.render("health", newObj);
     }
-    console.log(newObj);
-    res.render("health", newObj);
+    else {
+        res.redirect("/")
+    }
 });
 
 router.get("/registration", (req, res) => {
-    const newObj = {};
+    if (req.session.user) {
 
-    // passing along the registration role-type that was picked on the profile page
-    // needed to pass it along so health history will render appropriately
-    newObj.regRole = req.query.role;
+        const newObj = { user: req.session.user };
+        newObj.regRole = req.query.role;
+        switch (req.query.role) {
+            case "volunteer":
+                newObj.volunteer = true;
+                break;
+            case "childVolunteer":
+                newObj.childVolunteer = true;
+                break;
+            case "participant":
+                newObj.participant = true;
+                break;
+            case "boy":
+                newObj.boy = true;
+                break;
 
-    switch (req.query.role) {
-        case "volunteer":
-            newObj.volunteer = true;
-            break;
-        case "childVolunteer":
-            newObj.childVolunteer = true;
-            break;
-        case "participant":
-            newObj.participant = true;
-            break;
-        case "boy":
-            newObj.boy = true;
-            break;
+            default:
+                break;
 
-        default:
-            break;
+        }
+        console.log(newObj);
+        res.render("registration", newObj);
     }
-    console.log(newObj);
-    res.render("registration", newObj);
+    else {
+        res.redirect("/")
+    }
 });
+
+
+
+
 
 router.get("/managerprofile", (req, res) => {
-    res.render("managerProfile");
-});
+    res.render("managerProfile")
+    });
 
 router.get("/grade/:id", (req, res) => {
     db.Registration.findAll({
@@ -91,16 +112,13 @@ router.get("/camper/:id", (req, res) => {
         include: [db.HealthHistory, db.VolunteerInfo]
 
     })
+        .then(results => {
+            // const register = {data: results};
+            // console.log(register);
+            console.log(results);
+            res.render("managerCamper", results);
 
-    .then(results=>{
-        const resultsJson = results.toJSON()
-        // const register = {data: results};
-        // console.log(register);
-        console.log(resultsJson);
-    res.render("managerCamper",resultsJson);
-    
-});
-    
+        });
 
 });
 
