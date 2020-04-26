@@ -11,59 +11,59 @@
         <tbody>
           <tr>
             <th>First Name:</th>
-            <th>{{first_name}}</th>
+            <th>{{dataValues.first_name}}</th>
           </tr>
           <tr>
             <th>Last Name:</th>
-            <th>{{last_name}}</th>
+            <th>{{dataValues.last_name}}</th>
           </tr>
           <tr>
             <th>Birthdate:</th>
-            <th>{{birthdate}}</th>
+            <th>{{dataValues.birthdate}}</th>
           </tr>
           <tr>
             <th>Grade in School:</th>
-            <th>{{grade_in_school}}</th>
+            <th>{{dataValues.grade_in_school}}</th>
           </tr>
           <tr>
             <th>T-Shirt Size:</th>
-            <th>{{t_shirt_size}}</th>
+            <th>{{dataValues.t_shirt_size}}</th>
           </tr>
           <tr>
             <th>Buddy Requests:</th>
-            <th>{{buddy_request}}</th>
+            <th>{{dataValues.buddy_request}}</th>
           </tr>
           <tr>
             <th>Troop Number:</th>
-            <th>{{troop_number}}</th>
+            <th>{{dataValues.troop_number}}</th>
           </tr>
           <tr>
             <th>Service Unit Number:</th>
-            <th>{{service_unit_number}}</th>
+            <th>{{dataValues.service_unit_number}}</th>
           </tr>
           <tr>
             <th>Authorized Release Names:</th>
-            <th>{{authorized_release_names}}</th>
+            <th>{{dataValues.authorized_release_names}}</th>
           </tr>
           <tr>
             <th>Guardian First Name:</th>
-            <th>{{guardian_first_name}}</th>
+            <th>{{dataValues.guardian_first_name}}</th>
           </tr>
           <tr>
             <th>Guardian Last Name:</th>
-            <th>{{guardian_last_name}}</th>
+            <th>{{dataValues.guardian_last_name}}</th>
           </tr>
           <tr>
             <th>Address:</th>
-            <th>{{address_street}}</th>
+            <th>{{dataValues.address_street}}</th>
           </tr>
           <tr>
             <th>City:</th>
-            <th>{{address_city}}</th>
+            <th>{{dataValues.address_city}}</th>
           </tr>
           <tr>
             <th>State:</th>
-            <th>{{address_state}}</th>
+            <th>{{dataValues.address_state}}</th>
           </tr>
           <tr>
             <th>Zip Code:</th>
@@ -75,44 +75,44 @@
           </tr>
           <tr>
             <th>Home Phone:</th>
-            <th>{{phone_home}}</th>
+            <th>{{dataValues.phone_home}}</th>
           </tr>
           <tr>
             <th>Work Phone:</th>
-            <th>{{phone_work}}</th>
+            <th>{{dataValues.phone_work}}</th>
           </tr>
           <tr>
             <th>Work Phone EXT:</th>
-            <th>{{phone_work_extension}}</th>
+            <th>{{dataValues.phone_work_extension}}</th>
           </tr>
           <tr>
             <th>Email Address:</th>
-            <th>{{email}}</th>
+            <th>{{dataValues.email}}</th>
           </tr>
           <tr>
             <th>First Emergency Contact Name:</th>
-            <th>{{emergency_contact_1_name}}</th>
+            <th>{{dataValues.emergency_contact_1_name}}</th>
           </tr>
           <tr>
             <th>Phone Number:</th>
-            <th>{{emergency_contact_1_phone:}}</th>
+            <th>{{dataValues.emergency_contact_1_phone:}}</th>
           </tr>
           <tr>
             <th>Relation to Camper:</th>
-            <th>{{emergency_contact_1_relationship:}}</th>
+            <th>{{dataValues.emergency_contact_1_relationship:}}</th>
           </tr>
           <tr>
           <tr>
             <th>Second Emergency Contact Name:</th>
-            <th>{{emergency_contact_2_name}}</th>
+            <th>{{dataValues.emergency_contact_2_name}}</th>
           </tr>
           <tr>
             <th>Phone Number:</th>
-            <th>{{emergency_contact_2_phone:}}</th>
+            <th>{{dataValues.emergency_contact_2_phone:}}</th>
           </tr>
           <tr>
             <th>Relation to Camper:</th>
-            <th>{{emergency_contact_2_relationship:}}</th>
+            <th>{{dataValues.emergency_contact_2_relationship:}}</th>
           </tr>
         </tbody>
       </table>
@@ -187,7 +187,7 @@
           </tr>
           <tr>
             <th>Injury Details:</th>
-            <th>{{HealthHistory.dataValues.in_ill_inj_detail}}</th>
+            <th>{{HealthHistory.dataValues.ci_ill_inj_detail}}</th>
           </tr>
           <tr>
             <th>Animals:</th>
@@ -273,7 +273,7 @@
       </table>
       {{/if}}
 
-      {{#if MedicationPermit.dataValues.camp_administered_rx}}
+      {{#if HealthHistory.dataValues.camp_administered_rx}}
       <table class="table">
         <thead>
           <tr>
@@ -283,63 +283,63 @@
         <tbody>
           <tr>
             <th>Camp Administered RX:</th>
-            <th>{{MedicationPermit.dataValues.camp_administered_rx}}</th>
+            <th>{{HealthHistory.dataValues.camp_administered_rx}}</th>
           </tr>
           <tr>
             <th>Aspirin:</th>
-            <th>{{MedicationPermit.dataValues.aspirin}}</th>
+            <th>{{HealthHistory.dataValues.aspirin}}</th>
           </tr>
           <tr>
             <th>Benadryl:</th>
-            <th>{{MedicationPermit.dataValues.benadryl}}</th>
+            <th>{{HealthHistory.dataValues.benadryl}}</th>
           </tr>
           <tr>
             <th>Dramamine:</th>
-            <th>{{MedicationPermit.dataValues.dramamine}}</th>
+            <th>{{HealthHistory.dataValues.dramamine}}</th>
           </tr>
           <tr>
             <th>Ibuprofen:</th>
-            <th>{{MedicationPermit.dataValues.ibuprofen}}</th>
+            <th>{{HealthHistory.dataValues.ibuprofen}}</th>
           </tr>
           <tr>
             <th>Imodium:</th>
-            <th>{{MedicationPermit.dataValues.imodium}}</th>
+            <th>{{HealthHistory.dataValues.imodium}}</th>
           </tr>
           <tr>
             <th>Pepto Bismol:</th>
-            <th>{{MedicationPermit.dataValues.pepto_bismol}}</th>
+            <th>{{HealthHistory.dataValues.pepto_bismol}}</th>
           </tr>
           <tr>
             <th>Robitussin:</th>
-            <th>{{MedicationPermit.dataValues.robitussin}}</th>
+            <th>{{HealthHistory.dataValues.robitussin}}</th>
           </tr>
           <tr>
             <th>Sudafed:</th>
-            <th>{{MedicationPermit.dataValues.sudafed}}</th>
+            <th>{{HealthHistory.dataValues.sudafed}}</th>
           </tr>
           <tr>
             <th>Tums:</th>
-            <th>{{MedicationPermit.dataValues.tums}}</th>
+            <th>{{HealthHistory.dataValues.tums}}</th>
           </tr>
           <tr>
             <th>Tylenol:</th>
-            <th>{{MedicationPermit.dataValues.tylenol}}</th>
+            <th>{{HealthHistory.dataValues.tylenol}}</th>
           </tr>
           <tr>
             <th>Neoaspirin:</th>
-            <th>{{MedicationPermit.dataValues.ont_neosporin}}</th>
+            <th>{{HealthHistory.dataValues.ont_neosporin}}</th>
           </tr>
           <tr>
             <th>Sunscreen:</th>
-            <th>{{MedicationPermit.dataValues.ont_sunscreen}}</th>
+            <th>{{HealthHistory.dataValues.ont_sunscreen}}</th>
           </tr>
           <tr>
             <th>Other:</th>
-            <th>{{MedicationPermit.dataValues.ont_other}}</th>
+            <th>{{HealthHistory.dataValues.ont_other}}</th>
           </tr>
           <tr>
             <th>Details:</th>
-            <th>{{MedicationPermit.dataValues.ont_detail}}</th>
+            <th>{{HealthHistory.dataValues.ont_detail}}</th>
           </tr>
 
         </tbody>

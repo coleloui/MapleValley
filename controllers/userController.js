@@ -13,7 +13,7 @@ router.get("/profile", function (req, res) {
 
         db.Registration.findAll({
             where:{
-                first_year:req.session.user.id
+                UserId:req.session.user.id
             }
              //where the id is the session id
             // include the registration table
