@@ -1,8 +1,36 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../models");
+const nodemailer = require("nodemailer");
 
+// nodemailer for sending acknowledgement emails
+async function sendAcknowledgementEmail(toAddress, registrantName) {
 
+    // create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'mvdcregistrar@gmail.com', // generated ethereal user
+            pass: 'bazinga!' // generated ethereal password
+        }
+    });
+
+    const mailOptions = {
+        from: 'mvdcregistrar@gmail.com',
+        to: toAddress,
+        cc: 'mvdcregistrar@gmail.com',
+        subject: 'MVDC Registration Received for ' + registrantName,
+        text: 'Thank you for registering at Maple Valley Day Camp!. More information will be coming in the next weeks.'
+    };
+
+    transporter.sendMail(mailOptions, function (err, info) {
+        if (error) {
+            console.log(err);
+        } else {
+            console.log('Email sent: ' + info.response);
+        }
+    })
+}
 
 router.get('/', (req, res) => {
     db.HealthHistory.findAll().then(dbHealthHistory => {
@@ -80,7 +108,19 @@ router.post('/register/:id', (req, res) => {
     db.HealthHistory.create(healthHistoryObj)
         .then(newHealthHistory => {
             console.log(newHealthHistory);
-            res.redirect("/profile");
+
+            db.Registration.findOne({
+                where: {
+                    id: req.params.id.replace(":", "")
+                }
+            }).then(dbRegistration => {
+                const toAddress = dbRegistration.email;
+                if (toAddress) {
+                    regName = dbRegistration.first_name + " " + dbRegistration.last_name;
+                    sendAcknowledgementEmail(toAddress, regName).catch(console.error);
+                }
+                res.redirect("/profile");
+            })
         })
 });
 
