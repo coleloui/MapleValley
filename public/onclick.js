@@ -8,7 +8,9 @@ logo.addEventListener("click", function(){ window.open("http://www.maplevalleyda
 
 var mod = document.getElementById("test")
 
-mod.addEventListener("click", showModal);
+if(mod){
+    mod.addEventListener("click", showModal);
+}
 
 function showModal() {
     var modEl = document.getElementById("modEl");

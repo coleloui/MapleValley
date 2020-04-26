@@ -79,26 +79,30 @@ router.get("/grade/:id", (req, res) => {
         const register = { data: results };
         console.log(register);
         console.log(results);
-    res.render("managerGrade", register);
-});
+        res.render("managerGrade", register);
+    });
 });
 
 router.get("/camper/:id", (req, res) => {
+    console.log("=====================get camper/:id ==============================")
+    console.log("===================================================")
+    console.log(req.params.id);
     db.Registration.findOne({
         where: {
             id: req.params.id
         },
-        include: [db.HealthHistory, db.MedicationPermit, db.VolunteerInfo]
+        include: [db.HealthHistory, db.VolunteerInfo]
 
     })
-    .then(results=>{
-        // const register = {data: results};
-        // console.log(register);
-        console.log(results);
-    res.render("managerCamper",results);
-    
-});
-    
+        .then(results => {
+            // const register = {data: results};
+            // console.log(register);
+            console.log("=====================results==============================")
+            console.log(results);
+            res.render("managerCamper", results);
+
+        });
+
 });
 
 

@@ -63,7 +63,9 @@ router.post('/register/:id', (req, res) => {
         emergency_contact_2_relationship: req.body.emergency_contact_2_relationship,
         contact_for_volunteer: req.body.contact_for_volunteer === "yes" ? trueString : falseString,
 
-        EventId: 1 // a hook for later when there are more events
+        EventId: 1, // a hook for later when there are more events
+        UserId: req.session.user.id
+
     };
 
     db.Registration.create(registrationObj)
