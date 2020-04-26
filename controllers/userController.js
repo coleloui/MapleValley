@@ -21,7 +21,7 @@ router.get("/profile", function (req, res) {
             const resultsAsJson = results.map(result=> result.toJSON())
 
             const register = {data: resultsAsJson};
-            console.log(resultsAsJson);
+            console.log(register);
             // depending on what  it looks like, either just send it back or put it in an object for handlebars
             // replace data with the results or the handlebars object
             res.render("profile", register
