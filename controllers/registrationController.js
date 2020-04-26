@@ -65,7 +65,6 @@ router.post('/register/:id', (req, res) => {
 
         EventId: 1, // a hook for later when there are more events
         UserId: req.session.user.id
-
     };
 
     db.Registration.create(registrationObj)

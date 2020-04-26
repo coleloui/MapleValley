@@ -11,7 +11,6 @@ var mod = document.getElementById("test")
 if(mod){
     mod.addEventListener("click", showModal);
 }
-
 function showModal() {
     var modEl = document.getElementById("modEl");
     modEl.classList.add("is-active");
