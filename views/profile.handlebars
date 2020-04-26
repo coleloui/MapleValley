@@ -13,15 +13,15 @@
         <div class="card-content">
           <div class="media">
             <div class="media-content">
-              <p class="title">{{dataValues.first_name}} {{dataValues.last_name}}</p>
-              <p class="subtitle">{{dataValues.email}}</p>
+              <p class="title">{{dataValues.first_name}} {{Registration.dataValues.last_name}}</p>
+              <p class="subtitle">{{Registration.dataValues.email}}</p>
             </div>
           </div>
           <div class="content">
-            <p class="subtitle">Unit Number: {{dataValues.service_unit_number}}</p>
-            <p class="subtitle">Troop Number: {{dataValues.troop_number}}</p>
-            <p class="subtitle">Authorized Names: {{dataValues.authorized_release_names}}</p>
-            <time>Registration Date: {{dataValues.createdAt}}</time>
+            <p class="subtitle">Unit Number: {{Registration.dataValues.service_unit_number}}</p>
+            <p class="subtitle">Troop Number: {{Registration.dataValues.troop_number}}</p>
+            <p class="subtitle">Authorized Names: {{Registration.dataValues.authorized_release_names}}</p>
+            <time>Registration Date: {{Registration.dataValues.createdAt}}</time>
             </br>
             <button class="button">Review your Info</button>
           </div>
