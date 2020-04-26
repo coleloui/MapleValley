@@ -88,7 +88,7 @@ router.get("/camper/:id", (req, res) => {
         where: {
             id: req.params.id
         },
-        include: [db.HealthHistory, db.MedicationPermit, db.VolunteerInfo]
+        include: [db.HealthHistory, db.VolunteerInfo]
 
     })
     .then(results=>{
