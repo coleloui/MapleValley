@@ -1,24 +1,22 @@
 body {
-    background-color: #00AE58;
-};
+  background-color: #00ae58;
+}
 
- .bg {
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tsuga_heterophylla_near_Rainier.jpg/1200px-Tsuga_heterophylla_near_Rainier.jpg);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-      
-} 
+.bg {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tsuga_heterophylla_near_Rainier.jpg/1200px-Tsuga_heterophylla_near_Rainier.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 #logo {
-    width: 100px;
+  width: 100px;
 }
 
 #logo:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-
 
 /* html {
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tsuga_heterophylla_near_Rainier.jpg/1200px-Tsuga_heterophylla_near_Rainier.jpg);
@@ -35,12 +33,11 @@ body {
     
   } */
 
-  .Trees {
-      width:100vw;
-      height: 70vh;
-      margin-top: 10px;
-      background-size: 100%;
-      vertical-align: bottom;
-      object-fit: fill;
-  }
-  
+.Trees {
+  width: 100vw;
+  height: 70vh;
+  margin-top: 10px;
+  background-size: 100%;
+  vertical-align: bottom;
+  object-fit: fill;
+}
