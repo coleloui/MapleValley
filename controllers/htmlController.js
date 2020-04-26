@@ -7,54 +7,75 @@ router.get("/",(req,res)=>{
 });
 
 router.get("/role",(req,res)=>{
-    res.render("role");
+    if (req.session.user){
+        var userData = {
+            user:req.session.user
+        }
+        res.render("role", userData);
+    } else {
+        res.redirect("/")
+    } 
+
 });
 
 router.get("/health",(req,res)=>{
-    console.log(req.query.role)
-    const newObj = {};
-    switch (req.query.role) {
-        case "volunteer":
-            newObj.volunteer=true;
-            break;
-        case "childVolunteer":
-            newObj.childVolunteer=true;
-            break;
-        case "participant":
-            newObj.participant=true;
-            break;
-        case "boy":
-            newObj.boy=true;
-            break;
-    
-        default:
-            break;
+    if (req.session.user){
+
+        console.log(req.query.role)
+        const newObj = {user:req.session.user};
+        switch (req.query.role) {
+            case "volunteer":
+                newObj.volunteer=true;
+                break;
+            case "childVolunteer":
+                newObj.childVolunteer=true;
+                break;
+            case "participant":
+                newObj.participant=true;
+                break;
+            case "boy":
+                newObj.boy=true;
+                break;
+        
+            default:
+                break;
+        }
+        console.log(newObj);
+        res.render("health",newObj);
     }
-    console.log(newObj);
-    res.render("health",newObj);
+    else {
+        res.redirect("/")
+    }
 });
 
 router.get("/registration",(req,res)=>{
-    const newObj = {};
-    switch (req.query.role) {
-        case "volunteer":
-            newObj.volunteer=true;
-            break;
-        case "childVolunteer":
-            newObj.childVolunteer=true;
-            break;
-        case "participant":
-            newObj.participant=true;
-            break;
-        case "boy":
-            newObj.boy=true;
-            break;
-    
-        default:
-            break;
+    if(req.session.user){
+        
+        const newObj = {user:req.session.user};
+        switch (req.query.role) {
+            case "volunteer":
+                newObj.volunteer=true;
+                break;
+            case "childVolunteer":
+                newObj.childVolunteer=true;
+                break;
+            case "participant":
+                newObj.participant=true;
+                break;
+            case "boy":
+                newObj.boy=true;
+                break;
+        
+            default:
+                break;
+        
+        }
+        console.log(newObj);
+        res.render("registration",newObj);
     }
-    console.log(newObj);
-    res.render("registration",newObj);
+    else {
+        res.redirect("/")
+    }
 });
 router.get("/managerprofile",(req,res)=>{
     res.render("managerProfile");

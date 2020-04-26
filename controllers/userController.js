@@ -20,7 +20,7 @@ router.get("/profile", function (req, res) {
         }).then((results) => {
             
 
-            const register = {data: results};
+            const register = {data: results, user: req.session.user};
             console.log(register);
             // depending on what  it looks like, either just send it back or put it in an object for handlebars
             // replace data with the results or the handlebars object
@@ -28,7 +28,7 @@ router.get("/profile", function (req, res) {
             );
         })
     } else {
-        res.redirect("/profile");
+        res.redirect("/");
     }
 })
 
@@ -96,8 +96,9 @@ router.get("/readsessions", function (req, res) {
 
 router.get("/logout", function (req, res) {
     req.session.destroy(function (err) {
-        res.json('logged out');
+        res.json('logged out')
     })
+    res.redirect("/");
 })
 
 module.exports = router;

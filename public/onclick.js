@@ -7,6 +7,11 @@ console.log(logo);
 
 logo.addEventListener("click", function(){ window.open("http://www.maplevalleydaycamp.com/")});
 
+var logout = document.getElementById("logout");
+logout.addEventListener("click", function(){
+    res.redirect("/")
+});
+
 
 var mod = document.getElementById("test")
 

@@ -39,5 +39,8 @@ body {
       width:100vw;
       height: 70vh;
       margin-top: 10px;
+      background-size: 100%;
+      vertical-align: bottom;
+      object-fit: fill;
   }
   
